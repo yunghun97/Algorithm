@@ -23,7 +23,7 @@ namespace dijstratest
         private static int[] prev=new int[]{-1,-1,-1,-1,-1};
         public static void Main(string[] args)
         {
-            serch(0,3);
+            serch(0,4);
         }
         private static void serch(int start, int end){
             if(start>5 || end>5) // 일단은 정점이 5개므로 초과로 입력되는 것을 막는다.
