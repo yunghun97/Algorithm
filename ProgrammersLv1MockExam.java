@@ -1,4 +1,4 @@
-/*import java.util.*;
+import java.util.*;
 public class ProgrammersLv1MockExam{
     public static void main(String [] args){
         int[] input1 = {1,2,3,4,5};
@@ -60,4 +60,4 @@ class Solution{
         }
         return answer;
     }
-}*/
+}
