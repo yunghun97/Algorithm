@@ -4,8 +4,10 @@ public class ProgrammersLv1MockExam{
         int[] input1 = {1,2,3,4,5};
         int[] input2 = {1,3,2,4,2};
         Solution Solve = new Solution();
+        
         int answerPrint[] = Solve.solution(input1);
         System.out.print(Solve.solution(answerPrint));
+        
         answerPrint= Solve.solution(input2);
         System.out.print(Solve.solution(answerPrint));
     }
