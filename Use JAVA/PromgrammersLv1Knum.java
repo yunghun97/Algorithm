@@ -1,13 +1,13 @@
 import java.util.Arrays;
 public class PromgrammersLv1Knum {
     public static void main_c(){
-        Solution Solve = new Solution();
+        Solution1 Solve = new Solution1();
         int array[] = {1,5,2,6,3,7,4};
         int commands[][] = {{2,5,3},{4,4,1},{1,7,3}};
         System.out.print(Solve.solution(array, commands));
     }
 }
-class Solution{
+class Solution1{
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
     for(int i =0; i< commands.length; i++)
