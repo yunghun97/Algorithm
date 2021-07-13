@@ -1,6 +1,6 @@
 import java.util.*;
 public class ProgrammersLv1HateOverlapNumber {
-    public static void main(String[] args){
+    public static void mainHate(String[] args){
             int[] Number = {1,1,3,3,0,1,1}; 
             Solution8 Sol8 = new Solution8();
             int[] output;
