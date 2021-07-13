@@ -1,5 +1,5 @@
 public class ProgrammersLv1DotProduct {
-    public static void main(String[] args){
+    public static void main_Dot(String[] args){
             Solution4 soul4 = new Solution4();
             int[] a = {1,2,3,4};
             int[] b = {-3,-1,0,2};

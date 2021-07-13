@@ -1,5 +1,5 @@
 public class ProgrammersLv1PlusMinus {
-    public static void main(String[] args){
+    public static void mainPlus(String[] args){
         int[] absolutes = {4,7,12};
         boolean[] signs = {true, false, true};
         Solution5 sol5 = new Solution5();
