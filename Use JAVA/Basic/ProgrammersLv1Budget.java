@@ -1,3 +1,4 @@
+package Basic;
 import java.util.*;
 public class ProgrammersLv1Budget {
     public static void main7(String[] args){

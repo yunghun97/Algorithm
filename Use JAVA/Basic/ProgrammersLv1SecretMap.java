@@ -1,3 +1,4 @@
+package Basic;
 import java.util.Arrays;
 public class ProgrammersLv1SecretMap{
     public static void main(String[] args) {

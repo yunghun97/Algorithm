@@ -1,3 +1,4 @@
+package Basic;
 public class ProgrammersLv1DotProduct {
     public static void main_Dot(String[] args){
             Solution4 soul4 = new Solution4();
