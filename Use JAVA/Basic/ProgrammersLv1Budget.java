@@ -1,7 +1,6 @@
-package Basic;
 import java.util.*;
 public class ProgrammersLv1Budget {
-    public static void main7(String[] args){
+    public static void main666(String[] args){
     int[] d = {1,3,2,5,4,2,2,3,3};
     int budget = 19;
     Solution6 sol6 = new Solution6();

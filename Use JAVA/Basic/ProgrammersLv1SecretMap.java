@@ -1,7 +1,7 @@
-package Basic;
+
 import java.util.Arrays;
 public class ProgrammersLv1SecretMap{
-    public static void main(String[] args) {
+    public static void mainMap(String[] args) {
         int n = 5;
         int[] map = new int[n];
         int[] arr1= {9,20,28,18,11}; int[] arr2 = {30,1,21,17,28};
