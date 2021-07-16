@@ -1,6 +1,6 @@
 import java.io.*;
 public class Buffertest {
-    public static void main666(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException{
         BufferedReader bf =new BufferedReader(new InputStreamReader(System.in));
         String s = bf.readLine();
         bf.close();
@@ -9,4 +9,3 @@ public class Buffertest {
         bw.close();
     }
 }
-
