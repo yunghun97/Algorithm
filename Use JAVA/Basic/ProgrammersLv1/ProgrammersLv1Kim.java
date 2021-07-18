@@ -1,3 +1,4 @@
+package Basic.ProgrammersLv1;
 public class ProgrammersLv1Kim {
     public static void main(String[] args) {
         String[] seoul = {"asdas","131","Gwon","Kim"};

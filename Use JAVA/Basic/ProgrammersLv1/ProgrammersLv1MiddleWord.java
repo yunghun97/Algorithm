@@ -1,3 +1,4 @@
+package Basic.ProgrammersLv1;
 public class ProgrammersLv1MiddleWord {
     public static void main(String[] args) {
         // String s = "abcde";
