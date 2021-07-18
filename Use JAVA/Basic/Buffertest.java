@@ -1,3 +1,4 @@
+package Basic;
 import java.io.*;
 public class Buffertest {
     public static void main(String[] args) throws IOException{

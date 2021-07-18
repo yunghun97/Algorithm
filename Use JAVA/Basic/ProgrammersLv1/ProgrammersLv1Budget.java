@@ -1,3 +1,5 @@
+package Basic.ProgrammersLv1;
+
 import java.util.*;
 public class ProgrammersLv1Budget {
     public static void main(String[] args){

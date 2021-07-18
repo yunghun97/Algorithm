@@ -1,3 +1,5 @@
+package Basic.ProgrammersLv1;
+
 public class Lv1String {
     public static void main(String[] args) {
         String s= "1a654";

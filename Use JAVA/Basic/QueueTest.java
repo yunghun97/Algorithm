@@ -1,4 +1,4 @@
-
+package Basic;
 import java.util.*;
 public class QueueTest {
     public static void mainQueueTest(String[] args) {
