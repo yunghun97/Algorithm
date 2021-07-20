@@ -5,7 +5,7 @@ public class Lv1String {
         String s= "1a654";
         boolean answer = true;
         if(s.length()==4||s.length()==6){
-        try{int a = Integer.parseInt(s);
+        try{Integer.parseInt(s);
         }catch(NumberFormatException e){
             answer = false;
             throw e;
