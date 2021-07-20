@@ -1,5 +1,4 @@
 package Basic;
-
 public class SsafyBuling {
 public static void main(String[] args) {
 	char[][] box = {
