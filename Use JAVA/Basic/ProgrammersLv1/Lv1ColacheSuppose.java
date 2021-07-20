@@ -2,16 +2,16 @@ package Basic.ProgrammersLv1;
 import java.util.Scanner;
 public class Lv1ColacheSuppose {
     public static void main(String[] args) {
-        Colache colache = new Colache();
+        Colach colach = new Colach();
         Scanner sc = new Scanner(System.in);
         long n = sc.nextInt();
         sc.close();
-        int answer = colache.solution(n);
+        int answer = colach.solution(n);
         System.out.println(answer);
 
     }
 }
-class Colache{
+class Colach{
     int solution(Long input){
         int count =0;
         int answer ;
