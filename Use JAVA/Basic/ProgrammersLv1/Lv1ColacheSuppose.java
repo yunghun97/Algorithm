@@ -4,7 +4,7 @@ public class Lv1ColacheSuppose {
     public static void main(String[] args) {
         Colach colach = new Colach();
         Scanner sc = new Scanner(System.in);
-        long n = sc.nextInt();
+        long n = sc.nextLong();
         sc.close();
         int answer = colach.solution(n);
         System.out.println(answer);
