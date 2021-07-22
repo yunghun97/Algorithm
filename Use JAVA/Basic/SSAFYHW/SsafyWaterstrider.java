@@ -57,6 +57,7 @@ public class SsafyWaterstrider {
                 
             }          
             System.out.printf("#%d %d\n",t,answer);   // 정답 출력
-        }           
+        }   
+            sc.close();        
         }
 }
