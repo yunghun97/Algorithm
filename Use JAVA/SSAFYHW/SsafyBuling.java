@@ -1,19 +1,22 @@
 package SSAFYHW;
+import java.util.Scanner;
 public class SsafyBuling {
 public static void main(String[] args) {
-	char[][] box = {
-        {'G','G','G'},
-        {'G','B','G'},
-        {'G','G','G'},
-        /*{'G','B','G','G','B'},
-        {'G','B','G','G','B'},
-        {'B','B','B','B','G'},
-        {'B','G','B','B','B'},
-        {'G','B','B','B','B'}*/};
+    Scanner sc = new Scanner(System.in);
+    int T = sc.nextInt();
+    for(int t=1; t<=T; t++){
+        int N = sc.nextInt();
+	char[][] box = new char[N][N];
+    for(int n1=0; n1<N; n1++){
+        for(int n2=0; n2<N; n2++){
+            box[n1][n2] = sc.next().charAt(0);
+        }
+    }
+
 int n = box.length;
 int[] x = {-1,-1,-1,0,0,1,1,1};
 int[] y = {-1,0,1,-1,1,-1,0,1};
-int result = 0; int resultTemp=2;
+int result = 0; int resultTemp=0;
 int Gcount =0;
 int temp =0;
 int count= 0;
@@ -57,6 +60,7 @@ if(result<=resultTemp && Gcount!=n*n)
     result = 2;
 else if(Gcount==n*n)
     result  =0;
-System.out.println(result);
-}	
+System.out.printf("#%d %d\n",T,result);
+        }
+    }	
 }
