@@ -1,4 +1,4 @@
-package Basic;
+package BackJun;
 import java.util.*;
 public class Number{
 public static void mainBackJunNumber(String[] args) {

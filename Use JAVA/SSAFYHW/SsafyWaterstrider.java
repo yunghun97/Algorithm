@@ -1,4 +1,4 @@
-package Basic.SSAFYHW;
+package SSAFYHW;
 import java.util.Scanner;
 public class SsafyWaterstrider {
     public static void main(String[] args) {
