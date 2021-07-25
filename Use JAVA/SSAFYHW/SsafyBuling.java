@@ -62,5 +62,6 @@ else if(Gcount==n*n)
     result  =0;
 System.out.printf("#%d %d\n",T,result);
         }
+    sc.close();
     }	
 }
