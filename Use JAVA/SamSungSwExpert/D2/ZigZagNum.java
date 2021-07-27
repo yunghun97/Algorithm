@@ -17,7 +17,7 @@ public class ZigZagNum {
             System.out.printf("#%d %d\n",x,answer);
             answer =0;
         }
-    }
+        sc.close();}
 }
 /*
 입력

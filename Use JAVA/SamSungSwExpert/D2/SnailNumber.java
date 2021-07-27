@@ -2,7 +2,7 @@ package SamSungSwExpert.D2;
 import java.util.Scanner;
 public class SnailNumber {
     public static void main(String[] args) {
-    int[] dx = {0,1,0,-1};
+    		int[] dx = {0,1,0,-1};
 			int[] dy = {1,0,-1,0};
 			Scanner sc = new Scanner(System.in);
 			int T = sc.nextInt();
@@ -42,6 +42,7 @@ public class SnailNumber {
 				System.out.println();
 			}
 		}
+		sc.close();
     }
 }
 

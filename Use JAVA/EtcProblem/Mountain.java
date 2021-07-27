@@ -35,5 +35,6 @@ public class Mountain {
             }
         }
         System.out.printf("봉우리의 갯수는 %d개 입니다.\n",answer);
+        sc.close();
     }
 }

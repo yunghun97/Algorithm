@@ -44,5 +44,5 @@ public class TwoNumberArray {
             System.out.printf("#%d %d\n",t,answer);
             answer =0;
         }
-    }
+        sc.close(); }
 }

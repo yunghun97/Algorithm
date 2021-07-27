@@ -21,6 +21,7 @@ public class MiddleAvg {
             System.out.printf("#%d %.0f\n",i,answer);
             answer = 0.0;
         }
+        sc.close();
     }
 }
 /*

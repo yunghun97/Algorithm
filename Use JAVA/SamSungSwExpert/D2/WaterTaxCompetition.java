@@ -22,7 +22,7 @@ public class WaterTaxCompetition {
             	System.out.printf("#%d %d\n",i,b);                            
             }
         }
-    }
+        sc.close();}
 }
 /* input 값
 2

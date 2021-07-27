@@ -23,5 +23,6 @@ public class NumberSort {
             }
             System.out.println("");
         }
+        sc.close();
     }
 }

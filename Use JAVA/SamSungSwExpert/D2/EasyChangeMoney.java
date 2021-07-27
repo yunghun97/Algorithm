@@ -25,5 +25,7 @@ public class EasyChangeMoney {
             }
             System.out.println();
         }
+    
+    sc.close();
     }
 }
