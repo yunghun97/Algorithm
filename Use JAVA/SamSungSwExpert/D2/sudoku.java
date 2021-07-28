@@ -1,4 +1,5 @@
 package SamSungSwExpert.D2;
+
 import java.util.Scanner;
 import java.util.Arrays;
 public class sudoku {
