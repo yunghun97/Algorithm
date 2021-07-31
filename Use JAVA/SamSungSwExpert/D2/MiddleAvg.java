@@ -1,4 +1,4 @@
-package SamSungSwExpert.D2;
+package D2;
 
 import java.util.Scanner;
 import java.util.Arrays;

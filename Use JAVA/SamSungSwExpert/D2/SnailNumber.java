@@ -1,4 +1,4 @@
-package SamSungSwExpert.D2;
+package D2;
 import java.util.Scanner;
 public class SnailNumber {
     public static void main(String[] args) {
