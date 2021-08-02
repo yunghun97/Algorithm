@@ -1,4 +1,4 @@
-package D2;
+package SamSungSwExpert.D2;
 import java.util.Scanner;
 public class MostNumber {
     public static void main(String[] args) {
