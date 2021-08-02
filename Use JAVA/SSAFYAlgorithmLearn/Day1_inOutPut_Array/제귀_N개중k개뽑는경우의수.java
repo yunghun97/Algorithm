@@ -2,6 +2,12 @@ package SSAFYAlgorithmLearn.Day1_inOutPut_Array;
 
 public class 제귀_N개중k개뽑는경우의수 {
     public static void main(String[] args) {
+     
+
+    }
+}
+
+    /*
         System.out.print("N개 중 K개 뽑는 경우의 수");
         System.out.println(HowMuch(5,2));
 
@@ -18,4 +24,4 @@ public class 제귀_N개중k개뽑는경우의수 {
         if(size<0) return 0;
         return arr[size]+ fibo(arr, size-1);
     }
-}
+}*/
