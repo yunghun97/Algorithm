@@ -7,6 +7,7 @@ public class Lv1ColacheSuppose {
         long n = sc.nextLong();
         sc.close();
         int answer = colach.solution(n);
+        
         System.out.println(answer);
 
     }
