@@ -22,7 +22,7 @@ public class 순열재귀2 {
         for(int i=0; i<N; i++){    // 넣을 숫자 1~3까지
             if(isSelected[i]) continue; // true 일때 사용중이므로 다음 수로
             
-            numbers[cnt] = input[i];    // number에 실제 숫자로 서장
+            numbers[cnt] = input[i];    // number에 실제 숫자로 저장
             isSelected[i] = true;
 
             permutation(cnt+1);     // 다음 자리수 구하러 가기
