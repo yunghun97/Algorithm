@@ -1,4 +1,4 @@
-package SSAFYAlgorithmLearn.Day1_inOutPut_Array;
+package SSFAlgorithmLearn.Day1_inOutPut_Array;
 
 import java.io.BufferedReader;
 import java.io.IOException;

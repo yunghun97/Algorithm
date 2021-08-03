@@ -1,4 +1,4 @@
-package SSAFYAlgorithmLearn.Day1_inOutPut_Array;
+package SSFAlgorithmLearn.Day1_inOutPut_Array;
 
 public class StringBuilderTest {
     public static void main(String[] args) {

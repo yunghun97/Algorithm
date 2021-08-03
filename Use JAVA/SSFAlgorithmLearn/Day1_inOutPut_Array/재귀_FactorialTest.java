@@ -1,4 +1,4 @@
-package SSAFYAlgorithmLearn.Day1_inOutPut_Array;
+package SSFAlgorithmLearn.Day1_inOutPut_Array;
 
 public class 재귀_FactorialTest {
     private static int factorial(int n){
@@ -13,8 +13,8 @@ public class 재귀_FactorialTest {
         }
         return answer;
     }
-    private static int res = 1;
-    /*private static void factorial3(int i){
+    /*private static int res = 1;
+    private static void factorial3(int i){
         if(i==1) {return;}
         res *=i;
         factorial3(i-1);

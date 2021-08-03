@@ -1,4 +1,4 @@
-package SSAFYAlgorithmLearn.Day1_inOutPut_Array;
+package SSFAlgorithmLearn.Day1_inOutPut_Array;
 
 public class 재귀_배열출력 {
     public static void main(String[] args) {

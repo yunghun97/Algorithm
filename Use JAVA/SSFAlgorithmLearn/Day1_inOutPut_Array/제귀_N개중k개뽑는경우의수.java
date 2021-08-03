@@ -1,8 +1,21 @@
-package SSAFYAlgorithmLearn.Day1_inOutPut_Array;
+package SSFAlgorithmLearn.Day1_inOutPut_Array;
 
 public class 제귀_N개중k개뽑는경우의수 {
+    private static int answer;
     public static void main(String[] args) {
      
+        System.out.println(comb(5,2));
+        System.out.println(comb(3,2));
+        System.out.println(comb(3,3));
+    }
+
+    private static int comb(int n, int r) {
+            // 자신을 포함해서 r개는 만드는 경우의 수 + 자신을 포함 x하고 r개
+            if(r==0||n==r) return 1;
+
+            
+            return comb(n-1,r-1) + comb(n-1,r);
+            //
 
     }
 }
