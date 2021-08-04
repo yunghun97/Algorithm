@@ -7,7 +7,7 @@ public class 기지국문제 {
         int[] dx = {-1,0,0,1};
         int[] dy = {0,-1,1,0};
         int count =0;
-        System.setIn(new FileInputStream("Use JAVA\\EtcProblem\\input.txt"));    
+        System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\기지국문제.txt"));    
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());    
         for(int t=1; t<=T; t++){

@@ -1,9 +1,11 @@
+package SSFAlgorithmLearn.Day1_inOutPut_Array;
+
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.io.IOException;
 import java.io.BufferedReader;
-public class BufferStringTokenizer {
+public class BufferStringTokenizerTest {
     public static void main(String[] args) throws IOException {
             int n = 5;
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
