@@ -11,7 +11,7 @@ public class SnailNumber {
 				int[][] arr = new int[input][input];
 				int count =1;
 				
-				arr[0][0]=count++;
+				arr[0][0]=count++;	// 기본 0을 가지고 
 				int nr =0;
 				int nc =0;
                 if(arr.length>1){   // 배열 크기는 기본 1이상이므로 2이상부터 돌리겠다.
@@ -19,9 +19,9 @@ public class SnailNumber {
 					while(true){        // 방향전환 계속하기 위해 true로 계속 돌린다.
 					for(int d=0; d<4; d++){
 						outer1 : while(true){
-						nr = nr + dx[d];        // 기본 0을 가지고 
+						nr = nr + dx[d];        
 						nc = nc + dy[d];
-						if(count==input*input+1){break outer;}      //count갯수를 만족하면 빠져나온다.
+						if(count==input*input+1){break outer;}      //count갯수를 만족하면 빠져나온다. n^2 +1이면 나온다.
 						else if(nr>=0&&nr<input&&nc>=0&&nc<input&&arr[nr][nc]==0){// 벽이나 아직 숫자 안넣으면 0이므로 0인 칸일때 까지
 							arr[nr][nc] = count++;         
 						}
