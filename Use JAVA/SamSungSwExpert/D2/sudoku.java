@@ -19,8 +19,8 @@ public class sudoku {
             int tempC[] = new int[10];
             outer : for(int i=0; i<9; i++){             // 각 행과열 비교하기
                 for(int j=0; j<9; j++){
-                tempR[sudoku[i][j]]++;
-                tempC[sudoku[j][i]]++;     
+                tempR[sudoku[i][j]]++;      // 각 번호에 ++
+                tempC[sudoku[j][i]]++;      // 2이상이 되면 중복된 수가 나옴으로 판단.
                 if(j==8){
                 for(int x=1; x<10; x++){                // 비교 한번 끝날때 마다 겹치는 값 확인하기
                     if(tempR[x]>1||tempC[x]>1){
