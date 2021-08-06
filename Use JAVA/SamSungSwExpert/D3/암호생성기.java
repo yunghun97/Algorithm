@@ -15,19 +15,32 @@ public class 암호생성기 {
         for(int t=1; t<=10; t++){
         br.readLine();
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        int min = Integer.MAX_VALUE; // 공통차감수
+        int temp;
         while(st.hasMoreTokens()){
-            q.offer(Integer.parseInt(st.nextToken()));
+            temp = Integer.parseInt(st.nextToken());
+            min = Math.min(min,temp);
+            q.offer(temp);
         }
+
+        if(min<=15){min=0;} // //15보다 작을 경우 뺴지 않는다.
+        else if(min%15==0){min-=15;}    //15배수와 동일할경우 -15해줌
+        min = min / 15*15;
+
+        for(int y=0; y<8; y++){
+            q.offer(q.poll()-min);
+        }
+        int tmp;
         int i=1;
         while(true){
             if(i==6) i=1;
-            if(q.peek()-i<=0){
-                q.poll();
+            tmp = q.poll()-i;
+            if(tmp<=0){            
                 q.offer(0);
                 break;
             }
             else{
-                q.offer(q.poll()-i);
+                q.offer(tmp);
                 i++;
             }
 
