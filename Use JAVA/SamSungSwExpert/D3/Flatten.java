@@ -1,11 +1,14 @@
 package SamSungSwExpert.D3;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
 import java.util.Arrays;
+//평탄화 하는 거
 public class Flatten{
         public static void main(String[] args) throws IOException{
+            System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\SWExpert\\D3\\Flatten.txt"));
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             StringTokenizer st;
             for(int t=1; t<=10; t++){
