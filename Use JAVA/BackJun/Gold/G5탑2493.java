@@ -16,6 +16,7 @@ public class G5탑2493 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
+        int compare;
         int topCount = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
         for(int i=1; i<=topCount; i++){
@@ -28,7 +29,7 @@ public class G5탑2493 {
             else{
                 while(true){
                     if(!stack.isEmpty()){  //비어있지 않으면
-                        int compare = stack.peek(); // 현재 val 앞쪽 칸 가져옴
+                        compare = stack.peek(); // 현재 val 앞쪽 칸 가져옴
                         if(compare>val){    // 앞에 값이 뒤에 값 보다 클 때
                             sb.append(" " + temp.peek()); // 앞에 타워의 번호를 저장한다.
                             stack.push(val);    // val타워,번호정보 저장
