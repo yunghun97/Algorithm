@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 public class B3알람시계2884 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\B3알람시계2884.txt"));
+        System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\Bronze\\B3알람시계2884.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st ;
         st = new StringTokenizer(br.readLine());

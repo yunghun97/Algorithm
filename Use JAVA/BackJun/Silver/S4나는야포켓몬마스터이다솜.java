@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 import java.io.*;
 public class S4나는야포켓몬마스터이다솜{
     public static void main(String[] args) throws IOException{
-        System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\S4나는야포켓몬마스터이다솜.txt"));
+        System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\Silver\\S4나는야포켓몬마스터이다솜.txt"));
         HashMap<Integer, String> map = new HashMap<Integer, String>();
         HashMap<String, Integer> map2 = new HashMap<String, Integer>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 public class S2동전11047{
     public static void main(String[] args) throws IOException{
-        System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\S2동전11047.txt"));
+        System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\Silver\\S2동전11047.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         st = new StringTokenizer(br.readLine());

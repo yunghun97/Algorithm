@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 public class B1평균은넘겠지4344{
     public static void main(String[] args) throws IOException{
-            System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\B1평균은넘겠지4344.txt"));
+            System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\Bronze\\B1평균은넘겠지4344.txt"));
            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
            StringTokenizer st;      
            int T= Integer.parseInt(br.readLine());
