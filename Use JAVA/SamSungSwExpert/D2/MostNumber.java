@@ -5,7 +5,7 @@ public class MostNumber {
         Scanner sc= new Scanner(System.in);
         int test = sc.nextInt();
         for(int T=1; T<=test; T++){
-            int t = sc.nextInt();
+            sc.nextInt();
             int[] arr = new int[101];
             for(int i=0; i<1000; i++){
             	arr[sc.nextInt()]++;
@@ -20,6 +20,7 @@ public class MostNumber {
              }
             System.out.printf("#%d %d\n",T,max);
         }
+        sc.close();
     }
 }
 //https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh

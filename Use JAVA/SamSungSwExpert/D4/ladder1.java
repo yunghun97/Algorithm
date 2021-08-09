@@ -37,7 +37,7 @@ class ladder1{
                outer2 : for(int d=0; d<2; d++){ 
                    nc +=dy[d];
                    if(nc>=0&&nc<100&&ladder[nr][nc]==1){        // 배열 index 범위와 사다리 값 확인
-                        outer1 : while(true){
+                        while(true){
                             nc += dy[d];
                             if(nc<0||nc>=100||ladder[nr][nc]!=1){
                                 nc-=dy[d];

@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class 쇠막대기자르기5432{    

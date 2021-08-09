@@ -1,7 +1,6 @@
 package SSFAlgorithmLearn.Day1_inOutPut_Array;
 
 public class 제귀_N개중k개뽑는경우의수 {
-    private static int answer;
     public static void main(String[] args) {
      
         System.out.println(comb(5,2));

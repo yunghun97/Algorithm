@@ -15,6 +15,7 @@ public class TimeAdd {
             if(hour1>12) hour1-=12;
             System.out.printf("#%d %d %d\n", t, hour1, minute1);
         }
+        sc.close();
     }
 }
 /*

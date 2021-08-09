@@ -31,7 +31,7 @@ public class WhereWordInput {
             	for(int c=0; c<size; c++){
                     if(arr[r][c]==1){
                         count[countSize]++;
-                		outer : for(int x=0; x<2; x++){
+                	for(int x=0; x<2; x++){
                             if(x==0 && c>0 && arr[r][c-dy[x]]==1){          // 자신 왼쪽 전칸이랑 비교해서 전칸이 빈칸이면 이미 계산 했으므로 다음껄로 넘어감
                                 continue;
                             }

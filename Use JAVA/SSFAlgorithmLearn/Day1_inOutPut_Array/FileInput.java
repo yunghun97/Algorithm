@@ -9,5 +9,6 @@ public class FileInput {
         System.setIn(new FileInputStream("Use JAVA\\SSAFYAlgorithmLearn\\Day1_inOutPut_Array\\input.txt"));
         Scanner sc = new Scanner(System.in);
         System.out.printf(sc.nextLine());
+        sc.close();
     }
 }
