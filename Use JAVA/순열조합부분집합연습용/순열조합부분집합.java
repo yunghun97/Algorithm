@@ -22,6 +22,7 @@ public class 순열조합부분집합 {
             System.out.println(Arrays.toString(answer));
             return;
         }
+
         for(int i=0; i<N; i++){
             answer[cnt]=input[i];
             isSelected[i]=false;
