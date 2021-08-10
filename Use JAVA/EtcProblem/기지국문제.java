@@ -1,7 +1,6 @@
 package EtcProblem;
 
 import java.io.*;
-import java.util.*;
 public class 기지국문제 {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         int[] dx = {-1,0,0,1};
@@ -62,8 +61,9 @@ public class 기지국문제 {
                             nc+=dy[d];
                             if(nr>=0&&nr<size&&nc>=0&&nc<size){     // 이거 if문 위로 올리면 고장남 .. 왜..?
                                 if(map[nr][nc]=='H'){
-                                    map[nr][nc]='X';}
-                            }
+                                    map[nr][nc]='X';
+                                }
+                                }
                             else break;
                         }
                     }
