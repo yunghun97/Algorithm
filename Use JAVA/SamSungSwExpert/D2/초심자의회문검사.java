@@ -26,7 +26,6 @@ public class 초심자의회문검사 {     //테케, + 문자열 입력하면 �
                     answer  =0;
                 }
             }
-            
             sb.setLength(0);
             System.out.printf("#%d %d\n",t,answer);
         }
