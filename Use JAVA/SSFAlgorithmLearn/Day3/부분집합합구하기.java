@@ -18,6 +18,7 @@ public class 부분집합합구하기 {
         }
         generateSubset(0);
         System.out.println("경우의 수 "+totalcount);
+        sc.close();
     }
     private static void generateSubset(int cnt){
         if(cnt ==N){

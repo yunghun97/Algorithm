@@ -11,11 +11,14 @@ public class 부분집합 {
         input = new int[N];
         isSelected = new boolean[N];
         totalcount =0;
+        System.out.println("배열 입력");
         for(int i=0; i<N; i++){
             input[i] = sc.nextInt();
         }
+        System.out.println();
         generateSubset(0);
         System.out.println("경우의 수 "+totalcount);
+        sc.close();
     }
     private static void generateSubset(int cnt){
         if(cnt ==N){
