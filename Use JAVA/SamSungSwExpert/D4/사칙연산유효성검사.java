@@ -1,7 +1,6 @@
 package SamSungSwExpert.D4;
 import java.util.StringTokenizer;
 import java.io.*;
-
 public class 사칙연산유효성검사 {       
     public static void main(String[] args) throws FileNotFoundException, IOException{
                 System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\SWExpert\\D4\\사칙연산유효성검사.txt"));
@@ -26,7 +25,6 @@ public class 사칙연산유효성검사 {
                             }
                         }
                     }
-                    
                     bw.write("#"+t+" "+answer+"\r\n");
                     bw.flush();
                 }//테케 끝
