@@ -1,0 +1,679 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch 사칙연산유효성검사",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D4.사칙연산유효성검사",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch B1소가길을건너간이유2_14668",
+            "request": "launch",
+            "mainClass": "BackJun.Bronze.B1소가길을건너간이유2_14668",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch B1평균은넘겠지4344",
+            "request": "launch",
+            "mainClass": "BackJun.Bronze.B1평균은넘겠지4344",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch B3알람시계2884",
+            "request": "launch",
+            "mainClass": "BackJun.Bronze.B3알람시계2884",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch G2소가길을건나간이유4_14464",
+            "request": "launch",
+            "mainClass": "BackJun.Gold.G2소가길을건나간이유4_14464",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch G5탑2493",
+            "request": "launch",
+            "mainClass": "BackJun.Gold.G5탑2493",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S2동전11047",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S2동전11047",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S2소가길을건너간이유5",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S2소가길을건너간이유5",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S3N과M1_15649",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S3N과M1_15649",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S3N과M2_15650",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S3N과M2_15650",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S3N과M3_15651",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S3N과M3_15651",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S4나는야포켓몬마스터이다솜",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S4나는야포켓몬마스터이다솜",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S4스위치켜고끄기1244",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S4스위치켜고끄기1244",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S5소가길을건너간이유1_14467",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S5소가길을건너간이유1_14467",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S5소가길을건너간이유3_14469",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S5소가길을건너간이유3_14469",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch S5재귀함수가뭔가요17478",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S5재귀함수가뭔가요17478",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch abc",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.abc",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv1ColacheSuppose",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.Lv1ColacheSuppose",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv1FindDemical",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.Lv1FindDemical",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv1HarShadNum",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.Lv1HarShadNum",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv1RemoveMin",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.Lv1RemoveMin",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv1String",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.Lv1String",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv1TwoNumAdd",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.Lv1TwoNumAdd",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv1xSpaceNumn",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.Lv1xSpaceNumn",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch NoCompleteRunner",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.NoCompleteRunner",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgrammersLv1ArraysSum",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.ProgrammersLv1ArraysSum",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgrammersLv1Budget",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.ProgrammersLv1Budget",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgrammersLv1Kim",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.ProgrammersLv1Kim",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgrammersLv1MiddleWord",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.ProgrammersLv1MiddleWord",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgrammersLv1SecretMap",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.ProgrammersLv1SecretMap",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgrammersLv1py",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.ProgrammersLv1py",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProrgrammersLv1ReverseOrder",
+            "request": "launch",
+            "mainClass": "Basic.ProgrammersLv1.ProrgrammersLv1ReverseOrder",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Buffertest",
+            "request": "launch",
+            "mainClass": "Basic.Test.Buffertest",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mountain",
+            "request": "launch",
+            "mainClass": "EtcProblem.Mountain",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 기지국문제",
+            "request": "launch",
+            "mainClass": "EtcProblem.기지국문제",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv2BridgeCrossBus",
+            "request": "launch",
+            "mainClass": "ProgrammersLv2.Lv2BridgeCrossBus",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lv2PhoneBook_useHash",
+            "request": "launch",
+            "mainClass": "ProgrammersLv2.Lv2PhoneBook_useHash",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch BufferStringTokenizerTest",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.BufferStringTokenizerTest",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileInput",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.FileInput",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringBuilderTest",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.StringBuilderTest",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringTokenizer_Test",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.StringTokenizer_Test",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 배열밀기",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.배열밀기",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 재귀_FactorialTest",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.재귀_FactorialTest",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 재귀_배열출력",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.재귀_배열출력",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 제귀_N개중k개뽑는경우의수",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.제귀_N개중k개뽑는경우의수",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 하노이재귀",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day1_inOutPut_Array.하노이재귀",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 순열재귀1",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day2.순열재귀1",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 순열재귀2",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day2.순열재귀2",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 이차원배열",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day2.이차원배열",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 전치행렬",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day2.전치행렬",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 조합재귀1",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day2.조합재귀1",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 부분집합",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day3.부분집합",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 부분집합합구하기",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day3.부분집합합구하기",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 스택브라우저",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day3.스택브라우저",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 주사위던지기",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day3.주사위던지기",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch LinkedListTest",
+            "request": "launch",
+            "mainClass": "SSFAlgorithmLearn.Day4.LinkedListTest",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch SsafyBuling",
+            "request": "launch",
+            "mainClass": "SSFHW.SsafyBuling",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch SsafyWaterstrider",
+            "request": "launch",
+            "mainClass": "SSFHW.SsafyWaterstrider",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch DigiTest1",
+            "request": "launch",
+            "mainClass": "SSFWorkShop.DigiTest1",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch DigiTest2",
+            "request": "launch",
+            "mainClass": "SSFWorkShop.DigiTest2",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch EasyChangeMoney",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.EasyChangeMoney",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch KillFly",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.KillFly",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch MiddleAvg",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.MiddleAvg",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch MostNumber",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.MostNumber",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumberSort",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.NumberSort",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch RichManProject",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.RichManProject",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch SnailNumber",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.SnailNumber",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreeSixNineGame",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.ThreeSixNineGame",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch TimeAdd",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.TimeAdd",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch TwoNumberArray",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.TwoNumberArray",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch WaterTaxCompetition",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.WaterTaxCompetition",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch WhereWordInput",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.WhereWordInput",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ZigZagNum",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.ZigZagNum",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch sudoku",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.sudoku",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 새로운불면증치료법1288",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.새로운불면증치료법1288",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 조교의성적매기기1983",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D2.조교의성적매기기1983",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Flatten",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D3.Flatten",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch WonJaeMemoryRestore",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D3.WonJaeMemoryRestore",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 농작물수확하기0804",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D3.농작물수확하기0804",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 상호의배틀필드1873",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D3.상호의배틀필드1873",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 암호생성기",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D3.암호생성기",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 퍼펙트셔플",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D3.퍼펙트셔플",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ladder1",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D4.ladder1",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 괄호짝짓기0805",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D4.괄호짝짓기0805",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 쇠막대기자르기5432",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D4.쇠막대기자르기5432",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정사각형방",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D4.정사각형방",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정사각형방2",
+            "request": "launch",
+            "mainClass": "SamSungSwExpert.D4.정사각형방2",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch test2",
+            "request": "launch",
+            "mainClass": "test2",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch test3",
+            "request": "launch",
+            "mainClass": "test3",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 문제풀이용",
+            "request": "launch",
+            "mainClass": "문제풀이용",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 부모자식상속예제",
+            "request": "launch",
+            "mainClass": "부모자식상속예제",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 순열연습용",
+            "request": "launch",
+            "mainClass": "순열연습용",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 순열조합용연습용기본폼",
+            "request": "launch",
+            "mainClass": "순열조합용연습용기본폼",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 조합연습용",
+            "request": "launch",
+            "mainClass": "조합연습용",
+            "projectName": "Algorithm_255f05f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch 피보나치",
+            "request": "launch",
+            "mainClass": "피보나치",
+            "projectName": "Algorithm_255f05f6"
+        }
+    ]
+}
