@@ -25,7 +25,7 @@ public class 순열조합부분집합 {
 
         for(int i=0; i<N; i++){
             answer[cnt]=input[i];
-            isSelected[i]=false;
+            permutation(cnt+1);
         }
     }
 }
