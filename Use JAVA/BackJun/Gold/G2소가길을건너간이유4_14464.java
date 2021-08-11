@@ -10,7 +10,8 @@ public class G2소가길을건너간이유4_14464 {
     static int ChickenCount, CowCount, answer;
     static int[] chickenArr;
     static boolean pass;
-    static PriorityQueue<Cow> pq = new PriorityQueue<>(new Comparator<Cow>(){
+    static PriorityQueue<Cow> pq = new PriorityQueue<>();
+    /*(new Comparator<Cow>(){
         @Override
         // 음수값이 리턴일 경우 기준점이 비교대상의 앞에 위치 -> 비교 대상이 뒤로 간다(원래 뒤에였음) -> 오름 차순
         // 양수값이 리턴일 경우 기준점이 비교대상 뒤에 위치 -> 반대(두 객체의 자리가 바뀐다.) -> 내림 차순
@@ -23,7 +24,7 @@ public class G2소가길을건너간이유4_14464 {
                 return o2.endTime -o1.endTime;      // 종료 시간 기준 내림차순
             }
         }
-    });
+    });*/
     public static void main(String[] args) throws IOException{
         System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\Gold\\G2소가길을건너간이유4_14464.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -41,8 +42,11 @@ public class G2소가길을건너간이유4_14464 {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-            pq.add(new Cow(a, b));  // 우선순위 큐에 저장 내림차순으로 시작시간이 같으면 종료시간 내림차순
+            pq.add(new Cow(a,b));  // 우선순위 큐에 저장 내림차순으로 시작시간이 같으면 종료시간 내림차순
         }
+        /*for(int i=0; i<CowCount; i++){
+            System.out.println(pq.poll());
+        }*/
         bw.write(String.valueOf(cal()));
         bw.flush();
         bw.close();
@@ -52,7 +56,7 @@ public class G2소가길을건너간이유4_14464 {
         int cnt =0;
         while(!pq.isEmpty()){
             pass = false;
-            for(int i=ChickenCount-1; i>=0; i--){
+            for(int i=0; i<ChickenCount; i++){
             if(chickenArr[i]>=pq.peek().startTime && chickenArr[i]<=pq.peek().endTime&&chickenArr[i]>=0){   // 1번 닭부터 끝까지 돌아서 소가
                     cnt++;
                     pq.poll();
@@ -66,7 +70,7 @@ public class G2소가길을건너간이유4_14464 {
         }
     return cnt;
     }
-    private static class Cow { //implements Comparable<Cow>{
+    private static class Cow implements Comparable<Cow>{
         int startTime;
         int endTime;
         public Cow(int startTime, int endTime){
@@ -76,18 +80,18 @@ public class G2소가길을건너간이유4_14464 {
         // 음수값이 리턴일 경우 기준점이 비교대상의 앞에 위치 -> 비교 대상이 뒤로 간다 -> 내림 차순
         // 양수값이 리턴일 경우 기준점이 비교대상 뒤에 위치 -> 반대
         // 0 일 경우 자리이동이 없다.
-        /*@Override
+        @Override
         public int compareTo(Cow o) {
-            if(Integer.compare(this.startTime, o.startTime)!=0){    // 비교해서 똑같이 않으면
-                return o.startTime-this.startTime;  // 내림 차순 정렬
+            if(Integer.compare(this.endTime, o.endTime)!=0){    // 비교해서 똑같이 않으면
+                return Integer.compare(this.endTime, o.endTime);  //  오름 차순 정렬
             }
             else{
-                return o.endTime-this.endTime;
+                return Integer.compare(this.startTime, o.startTime);
             }
-        }*/
+        }
         @Override
         public String toString(){       // 큐 들어갔는지 확인용 문제풀이에는 쓸모 없음
             return "[" + this.startTime +" | " + this.endTime +"]";
         }
-    }
+    }   
 }
