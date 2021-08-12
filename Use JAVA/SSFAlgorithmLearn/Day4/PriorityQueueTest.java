@@ -12,6 +12,7 @@ public class PriorityQueueTest {
 			}
 		});*/
 		//PriorityQueue<Student> q = new PriorityQueue<>((o1, o2)-> o1.score - o2.score);
+		//@FunctionalInterface
 		PriorityQueue<Student> q = new PriorityQueue<>((o1, o2)-> Integer.compare(o1.score, o2.score));
 		q.offer(new Student(5,10));
 		q.offer(new Student(1,70));
