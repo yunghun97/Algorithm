@@ -44,3 +44,4 @@ public class 햄버거다이어트개선 {           // 배열로 계산안하�
         sum(cnt+1, scoreSum,caloly);
     }
 }
+//https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWT-lPB6dHUDFAVT&categoryId=AWT-lPB6dHUDFAVT&categoryType=CODE&problemTitle=%ED%96%84%EB%B2%84%EA%B1%B0&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
