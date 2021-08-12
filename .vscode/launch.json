@@ -12,6 +12,14 @@
         },
         {
             "type": "java",
+            "name": "Launch S2배열돌리기3",
+            "request": "launch",
+            "mainClass": "BackJun.Silver.S2배열돌리기3",
+            "projectName": "Algorithm_255f05f6"
+        },
+        
+        {
+            "type": "java",
             "name": "Launch B1소가길을건너간이유2_14668",
             "request": "launch",
             "mainClass": "BackJun.Bronze.B1소가길을건너간이유2_14668",
