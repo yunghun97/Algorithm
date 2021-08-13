@@ -85,7 +85,7 @@ public class G2소가길을건너간이유4_14464 {
                 return Integer.compare(this.endTime, o.endTime);  //  오름 차순 정렬
             }
             else{
-                return Integer.compare(this.startTime, o.startTime);
+                return Integer.compare(o.startTime, this.startTime);        // 시작 시간이 큰 것 부터
             }
         }
         @Override
