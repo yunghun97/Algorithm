@@ -7,7 +7,7 @@ import java.util.Stack;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.OutputStreamWriter;
-public class G5탑2493 {
+public class G5탑_2493 {
     public static void main(String[] args) throws IOException{
         System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\Gold\\G5탑2493.txt"));
         Stack<Integer> stack = new Stack<>();
