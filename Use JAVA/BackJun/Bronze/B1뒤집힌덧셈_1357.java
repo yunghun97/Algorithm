@@ -16,7 +16,7 @@ public class B1뒤집힌덧셈_1357 {
         bw.close();
         br.close();
     }
-    static int reverse(int num){
+    static int reverse(int num){        // 숫자 뒤집는 메소드
         int result =0;
         while(num!=0){
             result = result*10+num%10;
