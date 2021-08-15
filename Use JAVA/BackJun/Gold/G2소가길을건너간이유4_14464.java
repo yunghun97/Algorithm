@@ -1,6 +1,7 @@
 package BackJun.Gold;
 import java.io.*;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -9,8 +10,7 @@ public class G2소가길을건너간이유4_14464 {
     static int ChickenCount, CowCount, answer;
     static int[] chickenArr;
     static boolean pass;
-    static PriorityQueue<Cow> pq = new PriorityQueue<>();
-    /*(new Comparator<Cow>(){
+    static PriorityQueue<Cow> pq = new PriorityQueue<>(new Comparator<Cow>(){
         @Override
         // 음수값이 리턴일 경우 기준점이 비교대상의 앞에 위치 -> 비교 대상이 뒤로 간다(원래 뒤에였음) -> 오름 차순
         // 양수값이 리턴일 경우 기준점이 비교대상 뒤에 위치 -> 반대(두 객체의 자리가 바뀐다.) -> 내림 차순
@@ -23,7 +23,7 @@ public class G2소가길을건너간이유4_14464 {
                 return o2.endTime -o1.endTime;      // 종료 시간 기준 내림차순
             }
         }
-    });*/
+    });
     public static void main(String[] args) throws IOException{
         System.setIn(new FileInputStream("Use JAVA\\inputTxt모음\\BackJun\\Gold\\G2소가길을건너간이유4_14464.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
