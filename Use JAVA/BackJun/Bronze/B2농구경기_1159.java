@@ -11,7 +11,7 @@ public class B2농구경기_1159 {
             arr[temp-97]++;
         }
         StringBuilder sb = new StringBuilder();
-        int answer =0;
+        
         for(int i=0; i<26; i++){
             if(arr[i]>=5){
                 sb.append((char)(i+97));
