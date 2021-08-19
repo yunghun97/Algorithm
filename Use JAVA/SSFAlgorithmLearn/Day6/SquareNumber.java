@@ -27,5 +27,6 @@ public class SquareNumber {
         int y = sc.nextInt();
         System.out.println(exp2(x,y));
         System.out.println(callCnt);
+        sc.close();
     }
 }
