@@ -4,6 +4,7 @@ public class B1설탕배달3_2839 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int M = sc.nextInt();
+        sc.close();
         if(M==4 || M==7){
             System.out.println(-1);
             return;
@@ -17,4 +18,5 @@ public class B1설탕배달3_2839 {
         }
         System.out.println(answer);
     }
+    
 }

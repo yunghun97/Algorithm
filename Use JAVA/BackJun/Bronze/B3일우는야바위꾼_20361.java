@@ -7,7 +7,7 @@ public class B3일우는야바위꾼_20361 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
         st = new StringTokenizer(br.readLine());
-        int N= Integer.parseInt(st.nextToken());
+        st.nextToken();
         int locate = Integer.parseInt(st.nextToken());
         int order = Integer.parseInt(st.nextToken());
         for(int i=0; i<order; i++){
