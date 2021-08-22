@@ -34,7 +34,7 @@ public class 최적경로 {
         br.close();        
     }
     private static void permutation(int cnt,int sum) {
-        if(sum>answer) return;
+        //if(sum>answer) return;
         if(cnt==customers.size()-1){
             //System.out.println(Arrays.toString(order));
             answer = Math.min(answer, sum + Math.abs(customers.get(order[size]).r-customers.get(order[size+1]).r) + Math.abs(customers.get(order[size]).c-customers.get(order[size+1]).c));
@@ -46,6 +46,7 @@ public class 최적경로 {
             
             isSelected[i] = true;
             order[cnt] = i;
+            if(answer>sum+Math.abs(customers.get(order[cnt-1]).r-customers.get(order[cnt]).r)+Math.abs(customers.get(order[cnt-1]).c-customers.get(order[cnt]).c))  // 조건에 만족하면 재귀로 돌리겠다.
             permutation(cnt+1, sum+Math.abs(customers.get(order[cnt-1]).r-customers.get(order[cnt]).r)+Math.abs(customers.get(order[cnt-1]).c-customers.get(order[cnt]).c));  // 여기 하면 됨.
             isSelected[i] = false;
         }
