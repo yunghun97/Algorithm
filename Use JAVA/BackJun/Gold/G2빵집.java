@@ -1,6 +1,5 @@
 package BackJun.Gold;
 import java.io.*;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 
