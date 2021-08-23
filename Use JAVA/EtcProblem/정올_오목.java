@@ -17,6 +17,7 @@ public class 정올_오목 {
 			for (int j = 1; j < 20; j++)
 				map[i][j] = sc.nextInt();
 		
+		sc.close();
 		// 좌표를 하나씩 이동하면서 오목이 되는지 체크시작
 		for (int i = 1; i < 20; i++) {
 			for (int j = 1; j < 20; j++) {
@@ -40,6 +41,5 @@ public class 정올_오목 {
 			}
 		}
 		System.out.println(0);
-		sc.close();
 	}
 }
