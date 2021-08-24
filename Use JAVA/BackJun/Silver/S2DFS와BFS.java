@@ -30,7 +30,7 @@ public class S2DFS와BFS {
         }
         isVisited = new boolean[nodeCount+1];
         for(int i=0; i<list.size(); i++){
-            Collections.sort(list.get(i), (o1, o2)->            // 시작 정점 기준 오름차순 정렬
+            Collections.sort(list.get(i), (o1, o2)->            // 종료 정점 기준 오름차순 정렬
             {
                 return Integer.compare(o1.end, o2.end);
             });
@@ -98,3 +98,16 @@ public class S2DFS와BFS {
     }
 }
 //https://www.acmicpc.net/problem/1260
+
+/*
+5 5 3
+5 4
+5 2
+1 2
+3 4
+3 1
+
+결과
+3 1 2 5 4
+3 1 4 2 5
+*/
