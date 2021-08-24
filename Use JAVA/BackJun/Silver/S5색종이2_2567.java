@@ -10,11 +10,11 @@ public class S5색종이2_2567 {       // 너비가 아니라 테두리라서 �
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
-        map = new boolean[101][101];
+        map = new boolean[102][102];
         int T = Integer.parseInt(br.readLine());
         for(int t=1; t<=T; t++){
             st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken()); int b = a+10;
+            int a = 1+Integer.parseInt(st.nextToken()); int b = a+10;
             int c = 100-Integer.parseInt(st.nextToken()); int d = c-10;
 
             for(int i=a; i<b; i++){
