@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 
-public class G2빵집 {
+public class G2빵집_3109 {
     static int R,C, answer;
     static char[][] map;
     static boolean[][] isSelectedMap;
