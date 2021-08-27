@@ -5,7 +5,7 @@ import java.util.*;
 public class MSTPrimTest {
     public static void main(String[] args) throws IOException{
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(in.readLine());
+        int N = Integer.parseInt(in.readLine());    // 정점 수
         int[][] adjMatrix = new int[N][N]; 
         boolean[] visited = new boolean[N];  // 포함여부 확인
         int[] minEdge = new int[N];     // 최솟값 저장 배열
@@ -21,7 +21,7 @@ public class MSTPrimTest {
         int result = 0;
         minEdge[0] = 0; // 임의의 시작점 0의 간선비용을 0으로 세팅(최솟값 으로);
 
-        for(int i=0; i<N; i++){
+        for(int i=0; i<N; i++){ // 정점 수 만큼
             // 1. 신장트리에 포함되지 않은 정점 중 최소간선비용의 정점 찾기
             int min = Integer.MAX_VALUE;
             int minVertex = -1; // 최소간선비용의 정점 번호
@@ -31,7 +31,7 @@ public class MSTPrimTest {
                     minVertex = j;
                 }
             }
-
+            System.out.println(Arrays.toString(minEdge));
             visited[minVertex] = true; // 신장트리에 포함시킴
             result += min; // 결과에 누적
             //2. 선택된 정점 기준으로 신장트리에 연결되지 않은 타 정점과의 간선 비용 최소로 업데이트
@@ -40,7 +40,8 @@ public class MSTPrimTest {
                     minEdge[j] = adjMatrix[minVertex][j];
                 }
             }
-
+            
+            System.out.println(Arrays.toString(visited));
         }
         
         System.out.println(result);

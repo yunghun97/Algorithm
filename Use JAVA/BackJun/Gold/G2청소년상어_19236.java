@@ -35,7 +35,10 @@ public class G2청소년상어_19236 { // 방향 상 = 1 -> 반시계방향으�
         // System.out.println(defaultFishes.toString());
         // System.out.println(shark.toString());
         sharkMove(shark, defaultMap, defaultFishes);
-        System.out.println(answer);
+        bw.write(""+answer);
+        bw.flush();
+        bw.close();
+        br.close();
 
     }
     private static void sharkMove(Shark shark, int[][] map, LinkedList<Fishes> fishes) {
