@@ -34,7 +34,7 @@ public class 최적경로 {
         br.close();        
     }
     private static void permutation(int cnt,int sum) {
-        //if(sum>answer) return;
+        // if(sum>answer) return;
         if(cnt==customers.size()-1){
             //System.out.println(Arrays.toString(order));
             answer = Math.min(answer, sum + Math.abs(customers.get(order[size]).r-customers.get(order[size+1]).r) + Math.abs(customers.get(order[size]).c-customers.get(order[size+1]).c));
