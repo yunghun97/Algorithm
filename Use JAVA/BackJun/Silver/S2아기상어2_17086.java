@@ -32,7 +32,7 @@ public class S2아기상어2_17086 {
         bw.close();
         br.close();
     }
-    private static void cal() {
+    private static void cal() { //bfs 탐색
         while(!q.isEmpty()){
             int qSize = q.size();
             boolean check = false;
