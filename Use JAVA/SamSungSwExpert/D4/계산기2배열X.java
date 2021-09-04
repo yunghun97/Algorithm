@@ -34,11 +34,13 @@ public class 계산기2배열X {     // 배열 안쓰고 char 선언하고 비�
             }
             while(!operator.isEmpty()){     // 연산자 스택에 남은거 모두 sb에 저장하겠다.
             sb.append(operator.pop());}
+            // System.out.println(sb.toString());
+
             for(int i=0; i<size; i++){
                 char calNum = sb.charAt(i);
                 if(Character.isDigit(calNum)){ // 숫자면 stack에 저장한다 0은 아스키코드 48이니까 -48
                     num.add(calNum-48);
-                }else{
+                }else{                      // 연산자가 나오면 7-8 = 78-가 된다 따라서 8이 앞으로 가고 7이 뒤로 가야하며 결과 값을 stack에 다시 저장한다.
                     int b = num.pop();      // 먼저 뽑힌게 뒤로 가야한다.
                     int a = num.pop();      // 나중에 뽑힌 숫자를 앞으로
                     if(calNum=='*') num.add(a*b);  // *면 곱셈 아니면 +
