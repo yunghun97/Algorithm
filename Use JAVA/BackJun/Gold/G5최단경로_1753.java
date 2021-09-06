@@ -31,16 +31,17 @@ public class G5최단경로_1753 {
         
         while(!pq.isEmpty()){
             Node temp = pq.poll();
-            if(visited[temp.endNode]) continue;
+            if(visited[temp.endNode]) continue;     // 이미 방문한 노드라면 -> 해당 정점에서 갈 수 있는 것이 이미 다 반영되어있으므로 PASS
 
-            visited[temp.endNode] = true;
-            for(Node nd : list[temp.endNode]){
-                if(distance[nd.endNode] > distance[temp.endNode]+nd.weight){
-                    distance[nd.endNode] = distance[temp.endNode]+nd.weight;
-                    pq.add(new Node(nd.endNode, distance[nd.endNode]));
+            visited[temp.endNode] = true;  
+            for(Node nd : list[temp.endNode]){  // 연결되어 있는 정점들을 모두 확인한다.
+                if(distance[nd.endNode] > distance[temp.endNode]+nd.weight){ // 연결되어 있는 좌표가 있을 때 + 더 작은 값이 있으면
+                    distance[nd.endNode] = distance[temp.endNode]+nd.weight;    // 거리를 최소 값으로 바꾸어준다.
+                    pq.add(new Node(nd.endNode, distance[nd.endNode]));     // 연결되어 있으므로 연결된 정점을 탐색한다. distance[nd.endNode] = 가중치가 작은것 부터 정렬 할 수 있도록
                 }
             }
         }
+        
 
         for(int i=1; i<V; i++){
             if(distance[i]!=Integer.MAX_VALUE){
