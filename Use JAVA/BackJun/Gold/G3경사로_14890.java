@@ -22,10 +22,10 @@ class G3경사로_14890 {
  
         // 풀이 시작
         for (int i=0; i<n; i++) {
-            if (canGo(i, 0, 0))     // 0 이면 위에서 아래로
+            if (canGo(i, 0, 0))     // 0 이면 왼쪽에서 오른쪽
                 count++;
             
-            if (canGo(0, i, 1))     // 1이면 왼쪽에서 오른쪽으로
+            if (canGo(0, i, 1))     // 1이면 위에서 아래로
                 count++;
         }
  
