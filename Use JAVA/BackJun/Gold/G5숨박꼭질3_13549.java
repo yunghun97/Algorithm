@@ -14,7 +14,7 @@ public class G5숨박꼭질3_13549 {
         int answer = 0;
         int[] distance  = new int[100001];  // 거리 배열
         boolean[] isVisited = new boolean[100001];  // 방문 체크
-        // PriorityQueue<Node> pq = new PriorityQueue<>((o1,o2) -> Integer.compare(o1.weight, o2.weight)); // 가중치가 *면 0이라서 이 경우는 그냥 Queue가 더 빠르다.
+        // PriorityQueue<Node> pq = new PriorityQueue<>((o1,o2) -> Integer.compare(o1.weight, o2.weight)); // 가중치가 0,1 고정이라서 이 경우는 그냥 Queue가 더 빠르다.
         Queue<Node> pq = new LinkedList<>();
         pq.add(new Node(start,0));
         Arrays.fill(distance, Integer.MAX_VALUE);
@@ -26,7 +26,8 @@ public class G5숨박꼭질3_13549 {
                 break;
             }
             if(isVisited[temp.endPoint]) continue;  // 방문 했으면 다음 queue로
-            
+            isVisited[temp.endPoint] = true;
+
             if(temp.endPoint-1>=0){     // -1 일때
                 if(distance[temp.endPoint-1] > distance[temp.endPoint]+1){
                     distance[temp.endPoint-1] = distance[temp.endPoint]+1;
@@ -61,3 +62,4 @@ public class G5숨박꼭질3_13549 {
         }
     }
 }
+//https://www.acmicpc.net/problem/13549
