@@ -39,7 +39,7 @@ public class ContactLinkedList  {
     private static void cal() {
         q.add(start);
         isSelected[start] = true; // 시작지점
-        while(!q.isEmpty()){    // q 반복분
+        while(!q.isEmpty()){    // q 반복문
             int size = q.size(); answer= 0; // q.size 만큼 반복해줘서 더 이상 추가 안되면 마지막으로 q.size() 만큼 돌아간 것이 마지막 연락 주소이다.
             for(int i=0; i<size; i++){  // q.size만큼
                 int temp = q.poll();    // q원소 

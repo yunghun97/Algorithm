@@ -31,7 +31,6 @@ public class MSTPrimTest {
                     minVertex = j;
                 }
             }
-            System.out.println(Arrays.toString(minEdge));
             visited[minVertex] = true; // 신장트리에 포함시킴
             result += min; // 결과에 누적
             //2. 선택된 정점 기준으로 신장트리에 연결되지 않은 타 정점과의 간선 비용 최소로 업데이트
@@ -41,7 +40,6 @@ public class MSTPrimTest {
                 }
             }
             
-            System.out.println(Arrays.toString(visited));
         }
         
         System.out.println(result);

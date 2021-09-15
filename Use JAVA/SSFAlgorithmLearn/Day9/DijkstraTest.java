@@ -52,13 +52,12 @@ public class DijkstraTest {
 			//b단계: current정점을 경유지로 하여 갈수 있는 다른 방문하지 않은 정점들에 대한 처리
 			for(int c=0; c<V; ++c){
 				if(!visited[c] && matrix[current][c] != 0
-						&&  distance[c] > min+matrix[current][c]){
+					&&  distance[c] > min+matrix[current][c]){
 					distance[c] = min+matrix[current][c];
 				}
 			}
 		}
 		System.out.println(distance[end]);
-		
 	}
 
 }

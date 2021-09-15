@@ -16,6 +16,7 @@ public class NQueenTest{
 
         setQueens(1); // 1행부터 놓기
         System.out.println("경우의 수는 : "+cnt+" 입니다.");
+        sc.close();
     }
 
     private static void setQueens(int rowNum){
@@ -27,7 +28,7 @@ public class NQueenTest{
             return;
         }
 
-        // 1열부터 N열까지 놓아보기
+        // 1열부터 N열까지 놓아보기 
         // 놓았으면 다음 퀸 놓으러 가기
 
         for(int i=1; i<=N; i++){
@@ -38,7 +39,6 @@ public class NQueenTest{
             /*col[rowNum] = i; // i열에 놓아보기
             setQueens(rowNum+1);*/
         }
-
     }
     private static boolean isAvailable(int rowNum){
         for(int k=1; k<rowNum; k++){ // k : 이전 퀸
@@ -46,5 +46,4 @@ public class NQueenTest{
         }
         return true;
     }
-
 }
