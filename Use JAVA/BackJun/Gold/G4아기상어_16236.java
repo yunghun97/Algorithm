@@ -68,7 +68,8 @@ public class G4아기상어_16236 {
                     isSelected[nr][nc]=true;
                 }}
             }
-        }   if(!fishes.isEmpty()) break;  // 현재 최소 dist에 먹을 수 있는 물고기가 있으므로 더 찾을 필요 없이 바로 무엇을 먹을지 정해준다.
+            }
+            if(!fishes.isEmpty()) break;  // 현재 최소 dist에 먹을 수 있는 물고기가 있으므로 더 찾을 필요 없이 바로 무엇을 먹을지 정해준다.
         }
 
         if(fishes.isEmpty()) return;        // -> 더 이상 물고기를 먹을 수 없는 경우 종료
