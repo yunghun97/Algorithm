@@ -101,4 +101,4 @@ public class G4아기상어_16236 {
         
     }
 }
-//https://www.acmicpc.net/status?user_id=yunghun97&problem_id=16236&from_mine=1
+//https://www.acmicpc.net/problem/16236
