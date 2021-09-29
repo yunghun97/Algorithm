@@ -23,12 +23,12 @@ class ListNode{
         return this.data;
     }
 }
-public class LinkedList {
+public class LinkedListTest {
     
     private ListNode head;    // ListNode 타입의 head 노드 인스턴스 변수
     
     // LinkedList 생성자
-    public LinkedList() {
+    public LinkedListTest() {
         head = null;    // head 노드 초기화
     }
     
@@ -197,7 +197,7 @@ public class LinkedList {
     }
  
     public static void main(String args[]) {
-        LinkedList linkedList = new LinkedList();    // 연결 리스트 생성
+        LinkedListTest linkedList = new LinkedListTest();    // 연결 리스트 생성
         String str = "wed";
         
         linkedList.insertNode("sun");
