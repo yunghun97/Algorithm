@@ -3,6 +3,7 @@ package BackJun.Silver;
 import java.io.*;
 import java.util.*;
 
+
 public class S2DFS와BFS {
     static int nodeCount, order, start;
     static LinkedList<LinkedList<Node>> list;
@@ -17,7 +18,6 @@ public class S2DFS와BFS {
         order = Integer.parseInt(st.nextToken());
         start =Integer.parseInt(st.nextToken());
         list = new LinkedList<LinkedList<Node>>();
-
         for(int i=0; i<=nodeCount; i++){
             list.add(new LinkedList<Node>());
         }
