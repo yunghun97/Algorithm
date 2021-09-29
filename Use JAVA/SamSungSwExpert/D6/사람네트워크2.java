@@ -1,5 +1,6 @@
 package SamSungSwExpert.D6;
 
+// 플로이드 와샬
 import java.io.*;
 import java.util.*;
 public class 사람네트워크2 {
