@@ -64,10 +64,10 @@ public class G4녹색옷입은애가젤다지_4485 {
                 for(int i=0; i<list.get(start).size(); i++){    // 기준 정점 인접한 노드 모두 탐색
                     if(distance[list.get(start).get(i).num]>distance[start]+arr[list.get(start).get(i).num]){   // 기준 지점을 거쳐서 가는것 이 더 빠른 경우
                         // System.out.println("시작번호 : "+start+"  @  "+distance[start]+" & "+node.weight+ " %" + distance[list.get(start).get(i).num]);
-                        distance[list.get(start).get(i).num] = distance[start]+ arr[list.get(start).get(i).num];    // 해당 정점에 기준 정점 소모시간 + 기준 정점에서 해당 정점 가는 시간
+                        distance[list.get(start).get(i).num] = distance[start]+ arr[list.get(start).get(i).num];    // 기준 정점 소모시간 + 기준 정점에서 해당 정점 가는 시간
                         pq.add(new Node(list.get(start).get(i).num,distance[list.get(start).get(i).num]));  // pq에 넣고 가장 시간이 적게 걸리는 것 위주로 정렬
 
-                        if(list.get(start).get(i).num==N*N-1){  // 문제를 보면 목표 정점에 가는 시간은 다른 정점에서 가는 시간과 다 똑같으므로 목표 정점을 가장 처음 탐색하는 정점은 목표 정점전의 가장 최소 시간이므로 바로 출력하면 된다.(다 가중치가 다르면 Math.min해서 끝날 때 까지 돌려야 된다.)
+                        if(list.get(start).get(i).num==N*N-1){  // 문제를 보면 목표 정점에 가는 시간은 다른 정점에서 가는 시간과 다 똑같으므로 목표 정점을 가장 처음 탐색하는 정점은 목표 정점전의 가장 최소 시간이므로 바로 출력하면 된다.(다 가중치가 다르면 모든 정점을 다 확인할 때까지 돌려야 된다.)
                             bw.write("Problem "+index+": "+distance[list.get(start).get(i).num]+"\n");
                             break outer;
                         }
