@@ -72,7 +72,7 @@ public class 특이한자석개선 {
     private static void check(int num, int dir) {   // 회전할지 안할지 체크용
         int temp = dir;
         rotate[num] = dir;
-        for(int i=num; i<=3; i++){
+        for(int i=num; i<=3; i++){  // 오른쪽 자석 비교
             if(compare(i,i+1)){
                 rotate[i+1] = dir*-1;
                 dir *=-1;
@@ -80,7 +80,7 @@ public class 특이한자석개선 {
             else break;
         }
         dir = temp;
-        for(int i=num; i>=2; i--){
+        for(int i=num; i>=2; i--){  // 왼쪽 자석 비교
             if(compare(i-1,i)){
                 rotate[i-1] = dir*-1;
                 dir *= -1;
