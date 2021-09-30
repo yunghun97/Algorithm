@@ -1,6 +1,7 @@
 package SamSungSwExpert.D6;
 
-// 플로이드 와샬
+// 플로이드 와샬 or 다익스트라
+// 각 정점에서 모든 정점을 탐색하기 위해 거치는 간선의 개수를 구하면 된다. ex 1번 정점에서 2,3,4,5 탐색하기 위해 거치는 간선의 수
 import java.io.*;
 import java.util.*;
 public class 사람네트워크2 {
@@ -24,21 +25,21 @@ public class 사람네트워크2 {
                     else map[i][j] = a;
                 }
             }
-            System.out.println(Arrays.deepToString(map));
             for(int k = 0; k<V; k++){   // 경유지
                 for(int i=0; i<V; i++){ //출발지
+                    if(i==k) continue;
                     for(int j=0; j<V; j++){ // 도착지
+                        if(j==i||j==k) continue;
                         map[i][j] = Math.min(map[i][j],map[i][k]+map[k][j]);
                         
                     }
                 }
             }
             // D[2][3] -> Min D[2][3], D[2][1] D[1][3] -> 2번에서 3번 정점으로 가는거 vs 2에서 1정점들렸다가 1->3으로 가는거
-            System.out.println(Arrays.deepToString(map));
             int answer = INF;
             for(int i=0; i<V; i++){
                 int count =0;
-                for(int j=0; j<V; j++){
+                for(int j=0; j<V; j++){ 
                     count+=map[i][j];
                 }
                 answer = Math.min(answer,count);
