@@ -8,6 +8,7 @@ public class G5인구이동_16234 { // 다 뒤질필요 없이 Union find 활용
     static ArrayList<Node> map[][];
     static boolean[][] isVisited;
     static int[] dx = {-1,0,0,1}, dy ={0,-1,1,0};
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

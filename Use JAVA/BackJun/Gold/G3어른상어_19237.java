@@ -21,6 +21,7 @@ public class G3어른상어_19237 {
     static int[][] bloodMap;
     static int[][] remainMap;
     static ArrayList<Shark> list;
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

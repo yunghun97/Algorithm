@@ -50,6 +50,7 @@ public class G5마법사상어와파이어볼_20056 {
         bw.close();
         br.close();
     }
+    @SuppressWarnings("unchecked")
     private static void move() {    // 파이어볼 이동 메소드
         ArrayList<FireBall> tempMap[][] = new ArrayList[N][N];  // 파이어볼 이동시킨 임시 2차원 배열
         for(int i=0; i<N; i++){

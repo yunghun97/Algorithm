@@ -2,6 +2,7 @@ package BackJun.Gold;
 import java.io.*;
 import java.util.*;
 public class G5최단경로_1753 {
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException{
         ArrayList<Node>[] list ;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
