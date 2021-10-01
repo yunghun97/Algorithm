@@ -7,7 +7,7 @@ import java.util.*;
 // 방향 : 1 = 시계방향 -1 반 시계 방향
 
 public class 특이한자석개선 {
-    static ArrayList<int[]> list;
+    static LinkedList<Integer>[] list;
     static int[] rotate;
     public static void main(String[] args) throws IOException{
         
@@ -16,14 +16,14 @@ public class 특이한자석개선 {
         StringTokenizer st;
         int T = Integer.parseInt(br.readLine());
         for(int t=1; t<=T; t++){
-            list = new ArrayList<>();
-            list.add(new int[8]); // 쓰레기 값
+            list = new LinkedList[5];
             int order = Integer.parseInt(br.readLine());
+            list[0] = new LinkedList<>();
             for(int i=1; i<=4; i++){
                 st = new StringTokenizer(br.readLine());
-                list.add(new int[8]); // 1~4 초기값
+                list[i] = new LinkedList<>(); // 1~4 초기값
                 for(int j=0; j<8; j++){
-                    list.get(i)[j] = Integer.parseInt(st.nextToken());
+                    list[i].add(Integer.parseInt(st.nextToken()));
                 }
             }
             rotate = new int[5];
@@ -42,7 +42,7 @@ public class 특이한자석개선 {
             int answer = 0;
             for(int i=1; i<=4; i++){
                 int score = (int) Math.pow(2, i-1);
-                if(list.get(i)[0]==1) answer += score;
+                if(list[i].get(0)==1) answer += score;
             }
             bw.write("#"+t+" "+answer+"\n");
             bw.flush();
@@ -54,18 +54,10 @@ public class 특이한자석개선 {
 
     private static void move(int num, int dir) {
         if(dir==1){ // 시계 방향
-            int temp = list.get(num)[7];
-            for(int i=7; i>=1; i--){
-                list.get(num)[i] = list.get(num)[i-1];
-            }
-            list.get(num)[0] = temp;
+            list[num].addFirst(list[num].removeLast());
         }
         else{   // 반시계
-            int temp = list.get(num)[0];
-            for(int i=0; i<7; i++){
-                list.get(num)[i] = list.get(num)[i+1];
-            }
-            list.get(num)[7] = temp;
+            list[num].addLast(list[num].removeFirst());
         }
     }
 
@@ -91,7 +83,7 @@ public class 특이한자석개선 {
 
     }
     private static boolean compare(int left, int right) {
-        if(list.get(left)[2]!=list.get(right)[6]){
+        if(list[left].get(2)!=list[right].get(6)){
             return true;
         }
         return false;
