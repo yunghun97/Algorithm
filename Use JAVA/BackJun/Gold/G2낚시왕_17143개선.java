@@ -39,21 +39,38 @@ public class G2낚시왕_17143개선 {
             }else{ // 열간 이동
                 speed = speed%(2*C-2);
             }
-            list.add(new Shark(r, c,speed,dir,size,false));
+            list.add(new Shark(r, c,speed,dir,size));
             map[r][c] = list.get(i);
         }
         for(int i=0; i<C; i++){
             fishing(i); // 상어 잡기
             move(); // 상어 움직이기
+            removeShark();  // 상어 제거
        
         }
         bw.write(""+answer);
         bw.flush();
     }    
+    private static void removeShark() {
+        map = new Shark[R][C];
+        for(int i = 0; i < list.size(); i++){
+            Shark shark = list.get(i);
+            if(map[shark.r][shark.c]==null){
+                map[shark.r][shark.c] = shark;
+            }else{
+                if(map[shark.r][shark.c].size>shark.size){
+                    list.remove(shark);
+                    i--;
+                }else{
+                    list.remove(map[shark.r][shark.c]);
+                    map[shark.r][shark.c] = shark;
+                    i--;
+                }
+            }
+        }
+    }
     private static void move() {    // 상어 움직이기
-        Shark[][] tempMap = new Shark[R][C];
         for(int i=0; i<list.size(); i++){
-            if(list.get(i).dead) continue;  // 죽은 것은 이동 x
             Shark shark = list.get(i);
             int r = shark.r;
             int c = shark.c;
@@ -70,18 +87,7 @@ public class G2낚시왕_17143개선 {
             }
             shark.r = r;  // 해당 상어 좌표 새로 저장
             shark.c = c;
-            if(tempMap[r][c]!=null){
-                if(tempMap[r][c].size<shark.size){
-                    tempMap[r][c].dead = true;
-                    tempMap[r][c] = shark;     // 깊은 복사라서 tempMap에는 list의 주소가 들어가있다.
-                }
-                else shark.dead = true;
-            }else{
-                tempMap[r][c] = shark;             
-            }
-        }
-        for(int i=0; i<R; i++){
-            System.arraycopy(tempMap[i], 0, map[i], 0, C);
+
         }
     }
 
@@ -89,8 +95,7 @@ public class G2낚시왕_17143개선 {
         for(int r=0; r<R; r++){
             if(map[r][c]!=null){    // 낚고 answer++ 후 dead상태 체크 및 null로 만들기
                 answer += map[r][c].size;
-                map[r][c].dead = true;
-                map[r][c] = null;
+                list.remove(map[r][c]);
                 break;
             }
         }
@@ -101,14 +106,12 @@ public class G2낚시왕_17143개선 {
         int speed;
         int dir;
         int size;
-        boolean dead;
-        public Shark(int r, int c, int speed, int dir, int size, boolean dead) {
+        public Shark(int r, int c, int speed, int dir, int size) {
             this.r = r;
             this.c = c;
             this.speed = speed;
             this.dir = dir;
             this.size = size;
-            this.dead = dead;
         }
     }
 }
