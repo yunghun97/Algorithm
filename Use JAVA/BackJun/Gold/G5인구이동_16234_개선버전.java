@@ -17,8 +17,8 @@ public class G5인구이동_16234_개선버전 {
         Low = Integer.parseInt(st.nextToken());
         Max = Integer.parseInt(st.nextToken());
         map = new int[N][N];    // 인구 저장할 배열
-        indexMap = new int[N][N];   // 인덱스를 저장하는 배열
-        checkArr = new int[N*N][2]; // 인덱스에 해당한 사람 총합, 연합 수 저장용
+        indexMap = new int[N][N];   // 연합 저장하는 배열
+        checkArr = new int[N*N][2]; // 연합에 해당한 사람 총합, 연합 수 저장용
         isVisited = new boolean[N][N];
         int answer = 0;
         for(int i=0; i<N; i++){

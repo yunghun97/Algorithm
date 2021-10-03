@@ -3,7 +3,7 @@ package BackJun.Gold;
 import java.io.*;
 import java.util.*;
 
-public class G2구슬탈출BFS_13460 {
+public class G2구슬탈출2BFS_13460 {
     static int R,C,answer;
     static char[][] map, tempMap;
     static int[] dx = {-1,0,0,1}, dy ={0,-1,1,0};

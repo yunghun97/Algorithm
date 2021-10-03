@@ -5,7 +5,7 @@ import java.util.*;
 
 public class G5인구이동_16234 { // 다 뒤질필요 없이 Union find 활용하면 더 빠르게 가능할 듯
     static int N, Low, Max;
-    static ArrayList<Node> map[][];
+    static Node map[][];
     static boolean[][] isVisited;
     static int[] dx = {-1,0,0,1}, dy ={0,-1,1,0};
     @SuppressWarnings("unchecked")
@@ -19,13 +19,12 @@ public class G5인구이동_16234 { // 다 뒤질필요 없이 Union find 활용
         Low = Integer.parseInt(st.nextToken());
         Max = Integer.parseInt(st.nextToken());
         isVisited = new boolean[N][N];
-        map = new ArrayList[N][N];
+        map = new Node[N][N];
         for(int i=0; i<N; i++){
             st = new StringTokenizer(br.readLine());
             for(int j=0; j<N; j++){
-                map[i][j] = new ArrayList<>();
                 int a = Integer.parseInt(st.nextToken());
-                map[i][j].add(new Node(a, new boolean[]{false,false,false,false}));
+                map[i][j] = (new Node(a, new boolean[]{false,false,false,false}));
             }
         }
         
@@ -39,12 +38,12 @@ public class G5인구이동_16234 { // 다 뒤질필요 없이 Union find 활용
             noOpen = true;  // 인접한거 없으면 이 true로 아래에서 break;
             for(int i=0; i<N; i++){
                 for(int j=0; j<N; j++){
-                    Node node = map[i][j].get(0);   
+                    Node node = map[i][j];   
                     for(int d=0; d<4; d++){
                         int nr = i+dx[d];
                         int nc = j+dy[d];
                             if(nr<0||nr>=N||nc<0||nc>=N) continue;
-                            Node temp = map[nr][nc].get(0);
+                            Node temp = map[nr][nc];
                             if(Math.abs(node.people-temp.people)>=Low&&Math.abs(node.people-temp.people)<=Max){ // 범위 안이면 인접 체크용 noOpen을 false로 node의 인접방향 true로 바꿔준다
                                 node.openArea[d] = true;
                                 noOpen = false;       
@@ -75,7 +74,7 @@ public class G5인구이동_16234 { // 다 뒤질필요 없이 Union find 활용
                     open =false;
                     Area area = q.poll();
                     for(int d=0; d<4; d++){
-                        if(map[area.r][area.c].get(0).openArea[d]){ // 국경이 열려있으면
+                        if(map[area.r][area.c].openArea[d]){ // 국경이 열려있으면
                             int nr = area.r + dx[d];
                             int nc = area.c + dy[d];
                             open = true;    // 열린 좌표라는걸 표시
@@ -85,14 +84,14 @@ public class G5인구이동_16234 { // 다 뒤질필요 없이 Union find 활용
                         }
                     }
                     if(open){   // 열려있는거 합    // 닫혀 있는 좌표는 어짜피 이동 안하므로 따로 처리하지 않는다.
-                        sum+= map[area.r][area.c].get(0).people;
+                        sum+= map[area.r][area.c].people;
                         tempQ.add(new Area(area.r, area.c));  // 열려있는 좌표 tempQ에 넣기
                         count++;
                     }
                 }
                 while(!tempQ.isEmpty()){    // 인구이동 합으로 세팅하기
                     Area area = tempQ.poll();
-                    map[area.r][area.c].get(0).people = sum/count;
+                    map[area.r][area.c].people = sum/count;
                 }
             }
         }

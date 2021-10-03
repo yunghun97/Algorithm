@@ -51,7 +51,7 @@ public class G2구슬탈출2DFS_13460 {
             Blue tempBlue = new Blue(blue.r, blue.c);
 
             int firstBall = 0;  // 0이면 이동순서 ㄴ상관 1이면 blue먼저 2면 red먼저
-            firstBall = firstCheck(copyMap,tempRed,tempBlue, d);
+            firstBall = firstCheck(copyMap,tempRed,d);
             // System.out.println("firstBall : "+ firstBall +" 방향 : "+d +" time : "+ time);
             
             // 변수들 선언
@@ -147,7 +147,7 @@ public class G2구슬탈출2DFS_13460 {
             DFS(copyMap, time+1, d, tempRed, tempBlue);
         } // d for문
     }
-    private static int firstCheck(char[][] copyMap, Red tempRed, Blue tempBlue, int dir) {  // 누가 먼저 갈지 우선순위 체크
+    private static int firstCheck(char[][] copyMap, Red tempRed, int dir) {  // 누가 먼저 갈지 우선순위 체크
         int nr = tempRed.r+dx[dir];
         int nc = tempRed.c+dy[dir];    
         if(copyMap[nr][nc]=='B') return 1;
