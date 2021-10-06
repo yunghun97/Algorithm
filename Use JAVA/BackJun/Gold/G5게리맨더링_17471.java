@@ -4,161 +4,109 @@ import java.io.*;
 import java.util.*;
 
 public class G5게리맨더링_17471 {
-    static int N, AREA1, AREA2, answer,index, maxCombi;
-    static ArrayList<ArrayList<Node>> list;
-    static ArrayList<Integer> a1,a2;
-    static int[] map;
-    static boolean[] isVisited1, isVisited2, arr, isChecked1, isChecked2;
+    static int N,count,answer,max;
+    static ArrayList<Integer>[] map;
+    static int[] people;
+    static boolean[] arr, isVisited1, isVisited2;
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
-        
         N = Integer.parseInt(br.readLine());
-        map = new int[N+1];
+        arr = new boolean[N+1];
+        map = new ArrayList[N+1];   //인접정보 저장용
+        map[0] = new ArrayList<>(); 
+        people = new int[N+1];  // 인구수
         st = new StringTokenizer(br.readLine());
         for(int i=1; i<=N; i++){
-            map[i] = Integer.parseInt(st.nextToken());
+            people[i] = Integer.parseInt(st.nextToken());
         }
-        isVisited1 = new boolean[N+1];
-        isVisited2 = new boolean[N+1];
-        list = new ArrayList<>();
-        for(int i=0; i<=N; i++){
-            list.add(new ArrayList<>());
-        }
-        int noConnect = 0;
         for(int i=1; i<=N; i++){
             st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            if(a==0){
-                noConnect++;
-            }else{
-                while(st.hasMoreTokens()){
-                    list.get(i).add(new Node(i, Integer.parseInt(st.nextToken())));
-                }
+            map[i] = new ArrayList<>();
+            st.nextToken();
+            while(st.hasMoreTokens()){
+                map[i].add(Integer.parseInt(st.nextToken()));
             }
         }
-        arr = new boolean[N+1];
+        max =  (int)Math.pow(2,N)/2;    // 1,3,5 | 2,4 -> 2,4  | 1,3,5 는 결과가 같으므로 반만 돌게 하기위해
         answer = Integer.MAX_VALUE;
-        index = 0;
-        maxCombi =1;
-        for(int i=0; i<N; i++){
-            maxCombi *=2;
-        }
-        if(noConnect>=3){   // 처음부터 외딴 섬 3개면 -1
-            bw.write(""+(-1));
-        }else{
-            combi(1);
-            if(answer==Integer.MAX_VALUE) bw.write(""+(-1));    // 선거구가 2개로 나 뉠수 없으면 -1
-            else bw.write(""+answer);   // 2개로 나뉠 수 있으면 answer 출력
-        }
+        subset(0);
+        if(answer==Integer.MAX_VALUE) bw.write(""+(-1));
+        else bw.write(""+answer);
         bw.flush();
-        bw.close();
-        br.close();
     }
-
-    private static void combi(int cnt) { // 부분집합 뽑기 0부터 N-1까지 돌고 0~N-1 에서 1부터 시작하므로 +1 값을 부분집합의 값에 넣는다.
-        if(index>=maxCombi/2) return;   // true false false = false true true의 값과 동일하므로 부분집합 경우의수 / 2 만큼 부분집합을 뽑았으면 더 뽑지 않는다.
-        if(cnt==N+1){
-            // true면 1번 게더링 false면 2번 게더링해서 계산하기
-            check();
-            index++;
+    private static void subset(int cnt) {
+        if(count>=max) return;  // 이미 반 돌았으면 return
+        if(cnt==N){
+            count++;
+            cal();
             return;
         }
-            arr[cnt] = true;
-            combi(cnt+1);
-            arr[cnt] = false;
-            combi(cnt+1);
+        arr[cnt+1] = true;  // 부분집합
+        subset(cnt+1);
+        arr[cnt+1] = false;
+        subset(cnt+1);
     }
-    
-    private static void check() {   // 부분집합이 잘 뽑혔는지 계산
-        a1 = new ArrayList<>(); // 선거구 1
-        a2 = new ArrayList<>(); // 선거구 2
-        isVisited1 = new boolean[N+1];
-        isVisited2 = new boolean[N+2];
-        for(int i=1; i<=N; i++){
-            if(arr[i]){
-                a1.add(i);  // true면 a1 리스에 넣는다
-                isVisited1[i] = true;   //방문표시
-            }
-            else{
-                a2.add(i);  // true면 a2리스트에 넣는다
-                isVisited2[i] = true;   // 방문표시
-            }
-        }
-        if(a1.size()==N || a2.size()==N) return;    // 부분집합이므로 공집합, 모든거 다 뽑은 경우 선거구가 나뉠 수 없으므로 return
+    private static void cal() { // 계산
+        boolean[] isVisited1 = new boolean[N+1];
+        boolean[] isVisited2 = new boolean[N+1];
+        boolean[] isChecked1 = new boolean[N+1];
+        boolean[] isChecked2 = new boolean[N+1];
+        ArrayList<Integer> a = new ArrayList<>();
+        ArrayList<Integer> b = new ArrayList<>();
 
         for(int i=1; i<=N; i++){
-            if(isVisited1[i]){
-                connectCheck1(i);   // 한 선거구에서 한 점은 모든 한 선거구의 점의 연결되어 있으므로 연결체크 하고 break;
-                break;
+            if(arr[i]){ // a에 추가
+                a.add(i);
+                isVisited1[i] = true;
+            }
+            else{   // b에 추가
+                b.add(i);
+                isVisited2[i] = true;
             }
         }
-        for(int i=1; i<=N; i++){    // 선거구의 한 점에서 연결되어 있는 점과 한 선거구의 모든 점이 같지 않으면 선거구가 연결되어 있지 않으므로 return
-            if(isChecked1[i]!=isVisited1[i]) return;    
+        if(a.size()==N||b.size()==N) return;    // 한쪽이 다 선택된 경우 return
+        Queue<Integer> q = new LinkedList<>();
+        q.add(a.get(0));
+        isChecked1[a.get(0)] = true;   // 시작점 true 표시
+        while(!q.isEmpty()){    // bfs탐색
+            int num = q.poll();
+            for(int i=0; i<map[num].size(); i++){
+                if(!isVisited1[map[num].get(i)]) continue;
+                if(isChecked1[map[num].get(i)]) continue;
+                isChecked1[map[num].get(i)] = true;
+                q.add(map[num].get(i));
+            }
+        }
+        for(int i=1; i<=N; i++){    // 선택결과와 bfs 결과가 다르면 연결되어 있지 않으므로 return
+            if(isChecked1[i]!=isVisited1[i]) return;
         }
 
-        for(int i=1; i<=N; i++){
-            if(isVisited2[i]){
-                connectCheck2(i);  // 한 선거구에서 한 점은 모든 한 선거구의 점의 연결되어 있으므로 연결체크 하고 break;
-                break;
+        q.add(b.get(0));
+        isChecked2[b.get(0)] = true;    // 시작점 true 표시
+        while(!q.isEmpty()){    // bfs탐색
+            int num = q.poll();
+            for(int i=0; i<map[num].size(); i++){
+                if(!isVisited2[map[num].get(i)]) continue;
+                if(isChecked2[map[num].get(i)]) continue;
+                isChecked2[map[num].get(i)] = true;
+                q.add(map[num].get(i));
             }
         }
-        for(int i=1; i<=N; i++){    // 선거구의 한 점에서 연결되어 있는 점과 한 선거구의 모든 점이 같지 않으면 선거구가 연결되어 있지 않으므로 return
+        for(int i=1; i<=N; i++){        // 선택결과와 bfs 결과가 다르면 연결되어 있지 않으므로 return
             if(isChecked2[i]!=isVisited2[i]) return;
         }
-        int result1 = 0;
-        int result2 = 0;
-        for(int i=1; i<=N; i++){    // 선거구 1의 합과 선거구 2의 합 구하기
-            if(isVisited1[i]) result1+=map[i];  
-            else result2+=map[i];
-        }
-        answer = Math.min(Math.abs(Math.abs(result1)-Math.abs(result2)), answer);
-    }
 
-    private static void connectCheck1(int input) {
-        isChecked1 = new boolean[N+1];
-        Queue<Integer> q = new LinkedList<>();
-        q.add(input);
-        while(!q.isEmpty()){
-            int num = q.poll();
-            isChecked1[num] = true;
-            for(int i=0; i<list.get(num).size(); i++){
-                if(isVisited2[list.get(num).get(i).end]) continue;
-                if(isChecked1[list.get(num).get(i).end]) continue;
-                q.add(list.get(num).get(i).end);
-            }
+        int result1 =0;
+        int result2 =0;
+        for(int i=1; i<=N; i++){
+            if(isVisited1[i]) result1+=people[i];
+            else result2+=people[i];
         }
-
-    }
-
-    private static void connectCheck2(int input) {
-        isChecked2 = new boolean[N+1];
-        Queue<Integer> q = new LinkedList<>();
-        q.add(input);
-        while(!q.isEmpty()){
-            int num = q.poll();
-            isChecked2[num] = true;
-            for(int i=0; i<list.get(num).size(); i++){
-                if(isVisited1[list.get(num).get(i).end]) continue;
-                if(isChecked2[list.get(num).get(i).end]) continue;
-                q.add(list.get(num).get(i).end);
-            }
-        }
-    }
-
-    static class Node{
-        int start;
-        int end;
-        public Node(int start, int end) {
-            this.start = start;
-            this.end = end;
-        }
-        @Override
-        public String toString() {
-            return "Node start : "+start + " end : "+ end;
-        }
-        
+        answer = Math.min(answer, Math.abs(result1-result2));
+        return;
     }
 }
+
 //https://www.acmicpc.net/problem/17471
