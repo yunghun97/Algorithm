@@ -11,7 +11,7 @@ public class DP3_KnapsackTest {
         int[] weights = new int[N+1];
         int[] profits = new int[N+1];   
 
-        for(int i=0; i<N; i++){
+        for(int i=1; i<=N; i++){
             weights[i] = sc.nextInt();
             profits[i] = sc.nextInt();
         }
@@ -28,6 +28,7 @@ public class DP3_KnapsackTest {
                     D[i][w] = D[i-1][w];
                 }
             }
+            System.out.println();
         }
         System.out.println(D[N][W]);
         sc.close();
