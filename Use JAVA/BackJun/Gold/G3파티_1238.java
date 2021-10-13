@@ -11,7 +11,7 @@ public class G3파티_1238 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
-        st = new StringTokenizer(br.readLine());
+        st = new StringTokenizer(br.readLine()," ");
         N = Integer.parseInt(st.nextToken());
         X = Integer.parseInt(st.nextToken());
         destination = Integer.parseInt(st.nextToken());
@@ -41,10 +41,11 @@ public class G3파티_1238 {
         bw.flush();
     }    
 
-    private static void moveHome(int num) {
+    private static void moveHome(int num) { // 파티장소에서 집가기
         Arrays.fill(dis, Integer.MAX_VALUE);
         dis[num] = 0;
-        PriorityQueue<int[]> pq = new PriorityQueue<>((o1,o2) -> Integer.compare(o1[1],o2[1]));            pq.add(new int[]{num,0});
+        PriorityQueue<int[]> pq = new PriorityQueue<>((o1,o2) -> Integer.compare(o1[1],o2[1]));            
+        pq.add(new int[]{num,0});
             while(!pq.isEmpty()){
                 int start = pq.poll()[0];
                 for(int i=0; i<map[start].size(); i++){
@@ -62,7 +63,7 @@ public class G3파티_1238 {
         return;
     }
 
-    private static int move(int num) {
+    private static int move(int num) {  // 집에서 파티로 가기
         Arrays.fill(dis, Integer.MAX_VALUE);
         dis[num] = 0;
         PriorityQueue<int[]> pq = new PriorityQueue<>((o1,o2) -> Integer.compare(o1[1],o2[1]));
@@ -85,7 +86,7 @@ public class G3파티_1238 {
         }
         return 0;
     }
-    static class Node{
+    static class Node {
         int end;
         int weight;
         public Node(int end, int weight) {
