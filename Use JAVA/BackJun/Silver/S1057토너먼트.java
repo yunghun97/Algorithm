@@ -19,4 +19,4 @@ public class S1057토너먼트 {
 	}
 
 }
-https://www.acmicpc.net/problem/1057
+// https://www.acmicpc.net/problem/1057
