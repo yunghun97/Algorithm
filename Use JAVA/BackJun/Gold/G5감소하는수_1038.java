@@ -1,44 +1,32 @@
 package BackJun.Gold;
-
-import java.io.*;
-
-public class G5감소하는수_1038 {    // 아직 못품 재귀로 하면 스택오버플로우 남
-    static int N;
-    static BufferedWriter bw;
-    static boolean end;
-    public static void main(String[] args) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        N = Integer.parseInt(br.readLine());
-        end = false;
-        int cnt = 0;
-        int num = 1;
-        
-        bw.flush();
-
-    }
-
-    private static void check(int cnt, int num) throws IOException{
-        if(end) return;
-        if(cnt==N){
-            bw.write(""+(num-1));
-            end = true;
-            return;
-        }
-        int min = num%10;
-        int temp = num/10;
-        while(temp!=0){
-            if(temp%10>min){
-                temp/=10;
-            }else{
-                break;
+import java.io.BufferedReader; 
+import java.io.IOException; 
+import java.io.InputStreamReader; 
+import java.util.LinkedList; 
+import java.util.Queue; 
+public class G5감소하는수_1038{
+    public static void main(String[] args) throws IOException
+    { 
+        int n = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine()); 
+        if(n>1022) {
+            System.out.println(-1); 
+        } else if(n<10) { 
+            System.out.println(n); 
+        } else { 
+            Queue<Long> q = new LinkedList<>(); int cnt= 0; 
+            for(int i=1; i<10; i++) { 
+                q.add((long)i); cnt++; 
+            } while(cnt<n) { 
+                long k = q.poll(); 
+                long temp = k % 10; 
+                for(int i=0; i<temp; i++) { 
+                        q.add(k*10 + i); cnt++; 
+                        if(cnt == n) { 
+                        System.out.println(k*10+i); break; 
+                        } 
+                } 
             }
-        }
-        if(temp==0){
-            check(cnt+1, num+1);
-        }else{
-            check(cnt, num+1);
-        }
-    }
+        } 
+    } 
 }
 // https://www.acmicpc.net/problem/1038
