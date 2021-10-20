@@ -22,15 +22,18 @@ public class G5빗물_14719 {
         int left =0;
         int right =0;
         int answer = 0;
-        for(int i=1; i<C-1; i++){
+        for(int i=1; i<C-1; i++){   // 맨 왼쪽과 끝은 빗물이 쌓일 수 없다.
             left = 0;
-            right =0;
-            for(int j=0; j<i; j++){
+            right = 0;
+            for(int j=0; j<i; j++){ // 현재 좌표에서 왼쪽꺼 확인
                 left = Math.max(left, arr[j]);
+                if(left==R) break;  // 최대면 더 탐색 X
             }
-            for(int j=i+1; j<C; j++){
+            for(int j=i+1; j<C; j++){ // 현재 좌표에서 오른쪽 확인
                 right = Math.max(right, arr[j]);
+                if(right==R) break; //최대면 더 탐색 X
             }
+            // 현재 좌표에서 왼쪽, 오른쪽에 자기보다 큰 부분이 없으면 비가 안내린다.
             if(arr[i]<left&&arr[i]<right){
                 answer += Math.min(left, right)-arr[i];
             }
