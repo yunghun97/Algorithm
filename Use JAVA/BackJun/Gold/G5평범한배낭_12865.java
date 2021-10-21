@@ -18,7 +18,6 @@ public class G5평범한배낭_12865 {
             st = new StringTokenizer(br.readLine());
             w = Integer.parseInt(st.nextToken());
             score = Integer.parseInt(st.nextToken());
-
             for (int j = weight; j >= 1; j--) {
                 if (j >= w)
                     dp[j] = Math.max(dp[j], dp[j - w] + score);
