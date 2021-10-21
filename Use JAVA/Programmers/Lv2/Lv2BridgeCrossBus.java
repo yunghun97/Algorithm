@@ -1,4 +1,4 @@
-package Programmers.Lv2;
+/*
 import java.util.Queue;
 import java.util.LinkedList;
 public class Lv2BridgeCrossBus {
@@ -37,3 +37,4 @@ public class Lv2BridgeCrossBus {
     System.out.println(time+bridge_length);  // 마지막 적재된 트럭이 끝까지 갈려면 현재 다리길이 만큼 더 해줘야 마지막 까지 가므로 다리 길이를 더한다.
     }
 }
+*/

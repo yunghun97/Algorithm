@@ -1,8 +1,4 @@
-package Programmers.Lv2;
-
-public class Lv2타켓넘버 {
-    /*
-    class Solution {
+/*class Solution {
     static int answer, number;
     static int[] arr;
     public int solution(int[] numbers, int target) {
@@ -21,5 +17,4 @@ public class Lv2타켓넘버 {
             DFS(cnt+1, result-arr[cnt]);
     }
 }
-    */
-}
+*/
