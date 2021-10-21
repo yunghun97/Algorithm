@@ -1,4 +1,4 @@
-package ProgrammersLv2;
+package Programmers.Lv2;
 import java.util.Queue;
 import java.util.LinkedList;
 public class Lv2BridgeCrossBus {

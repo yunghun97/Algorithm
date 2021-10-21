@@ -1,4 +1,4 @@
-package ProgrammersLv2;
+package Programmers.Lv2;
 import java.util.HashMap;
 import java.util.Map;
 public class Lv2PhoneBook_useHash {

@@ -1,4 +1,4 @@
-package ProgrammersLv2;
+package Programmers.Lv2;
 
 public class Lv2타켓넘버 {
     /*
