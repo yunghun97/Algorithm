@@ -7,8 +7,8 @@ import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.StringTokenizer;;
-public class 봄버맨 {
+import java.util.StringTokenizer;
+public class S1봄버맨_16918 {
     static int R,C, N;
     static char[][] map;
     static int[] dx = {-1,0,0,1}, dy = {0,-1,1,0};
