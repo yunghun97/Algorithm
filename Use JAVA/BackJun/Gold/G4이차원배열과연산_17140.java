@@ -62,7 +62,7 @@ public class G4이차원배열과연산_17140 {
 
     }
     
-    private static int Ccal(int r, int c) {
+    private static int Ccal(int r, int c) { // C 연산
         int max = 0;
         for (int i = 0; i < c; i++) {
             for (int j = 0; j < r; j++) {
@@ -89,15 +89,14 @@ public class G4이차원배열과연산_17140 {
                 Node node = pq.poll();
                 map[++index][i] = node.num;
                 map[++index][i] = node.repeat;
-                if (index == 99)
-                    break;
+                if (index == 99)    break; // 끝까지 돔
             }
             pq.clear();
             max = Math.max(max, ++index);
         }
         return max;
     }
-    private static int Rcal(int r, int c) {
+    private static int Rcal(int r, int c) { // R 연산
         int max = 0;
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
@@ -124,8 +123,7 @@ public class G4이차원배열과연산_17140 {
                 Node node = pq.poll();
                 map[i][++index] = node.num;
                 map[i][++index] = node.repeat;
-                if (index == 99)
-                    break;
+                if (index == 99) break; // 끝까지 돔
             }
             pq.clear();
             max = Math.max(max, ++index);
