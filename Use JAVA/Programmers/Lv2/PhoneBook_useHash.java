@@ -1,7 +1,7 @@
 package Programmers.Lv2;
 import java.util.HashMap;
 import java.util.Map;
-public class Lv2PhoneBook_useHash {
+public class PhoneBook_useHash {
     public static void main(String[] args) {
         String[] phone_book = {"12","123","1235","567","88"};
         Lv2PhoneBookSolution pbs = new Lv2PhoneBookSolution();
