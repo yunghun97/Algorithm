@@ -99,17 +99,14 @@ public class G4마법사상어와파이어스톰_20058 {
     private static void move(int num) {      // 회전메소드
         int size = (int) Math.pow(2, num);   // 연산 끝나면 행, 열에 더 할 숫자
         int[][] newMap = new int[N][N];
-        for (int i = 0; i <N; i+=size) {
-			for (int j = 0; j < N; j+=size) {
-				int sx=j;
-				int sy=i;
-				for (int x = j; x < j+size; x++) {
-					sx=j;
-					for (int y = i+size-1; y >=i; y--) {
-						newMap[sy][sx++]=defaultMap[y][x];
-					}
-					sy++;
-				}
+        for (int r = 0; r <N; r+=size) {
+			for (int c = 0; c < N; c+=size) {
+				
+                for(int i =0; i<size; i++){
+                    for(int j=0; j<size; j++){
+                        newMap[c+i][r+j] = defaultMap[c+size-1-j][r+i];
+                    }
+                }
 			}
 		}
         defaultMap = newMap;
