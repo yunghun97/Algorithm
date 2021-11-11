@@ -9,6 +9,7 @@ public class G3이항계수3_11401 {
 		K=scann.nextInt();
 		long r=nCr(N,K);
 		System.out.println((r)%P);
+		scann.close();
 	}
 	
 	static long fact(long n) {
