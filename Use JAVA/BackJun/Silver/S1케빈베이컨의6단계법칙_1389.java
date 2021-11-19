@@ -54,6 +54,5 @@ public class S1케빈베이컨의6단계법칙_1389 {
  
 		System.out.println(min_node);
 	}
- 
 }
 //https://www.acmicpc.net/problem/1389
