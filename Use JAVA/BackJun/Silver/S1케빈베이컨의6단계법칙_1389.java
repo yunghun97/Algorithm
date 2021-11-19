@@ -8,6 +8,7 @@ public class S1케빈베이컨의6단계법칙_1389 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		N = Integer.parseInt(st.nextToken()); // 유저수
 		M = Integer.parseInt(st.nextToken()); // 관계 수
  
@@ -51,8 +52,7 @@ public class S1케빈베이컨의6단계법칙_1389 {
 				min_road = sum;
 			}
 		}
- 
-		System.out.println(min_node);
+        bw.write(""+min_node);
 	}
 }
 //https://www.acmicpc.net/problem/1389
