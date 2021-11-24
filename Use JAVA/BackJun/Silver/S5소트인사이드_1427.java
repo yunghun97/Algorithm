@@ -21,3 +21,4 @@ public class S5소트인사이드_1427 {
         bw.flush();
     }
 }
+//https://www.acmicpc.net/problem/1427
