@@ -131,3 +131,4 @@ public class G2낚시왕_17143 {
         }
     }
 }
+//https://www.acmicpc.net/problem/17143
