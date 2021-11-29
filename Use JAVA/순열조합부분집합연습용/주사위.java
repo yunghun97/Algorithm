@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class 주사위 {
+    
     static int N, R;
     static int[] answer, input;
     static boolean[] isSelected;
