@@ -47,10 +47,10 @@ public class G1온풍기안녕_23289 {
                 if (a == 0) {
                     continue;
                 } else if (a == 5) {
-                    checkArr.add(new Node(i, j));
+                    checkArr.add(new Node(i, j));   // 체크할 배열 노드 리스트
                     continue;
                 } else {
-                    heaters.add(new Heater(i, j, a));
+                    heaters.add(new Heater(i, j, a));   // 히터 리스트
                     continue;
                 }
             }
@@ -66,20 +66,17 @@ public class G1온풍기안녕_23289 {
         }
 
         while (choco <= 100) {
-            heat();
+            heat(); // 히터틀기
+            setTemper();    // 온도 조절
             // mapprint();
-            setTemper();
-            // mapprint();
-            minusTemper();
-            choco++;
-            // mapprint();
-            // wallprint();
-            if(endCheck()) break;
+            minusTemper();  // 외각 온도 -
+            choco++;    // 초콜릿 먹기
+            if(endCheck()) break;   // 끝나는지 체크
         }
         bw.write(""+choco);
         bw.flush();
     }
-    private static void mapprint() {
+    private static void mapprint() {    // 테스트 용 코드
         System.out.println("-----------------");
             for(int i=0; i<R; i++){
                 for(int j=0; j<C; j++){
@@ -90,8 +87,8 @@ public class G1온풍기안녕_23289 {
     }
 
     private static boolean endCheck() {
-        for(int i=0; i<checkArr.size(); i++){
-            Node node = checkArr.get(i);
+        for(Iterator<Node> it = checkArr.iterator(); it.hasNext();){
+            Node node = it.next();
             if(map[node.r][node.c]<K) return false;
         }
         // mapprint();
@@ -99,6 +96,10 @@ public class G1온풍기안녕_23289 {
     }
 
     private static void minusTemper() {
+        map[0][0]++;
+        map[R-1][0]++;
+        map[0][C-1]++;
+        map[R-1][C-1]++;
         for(int c=0; c<C; c++){
             if(map[0][c]>=1) map[0][c]--;
             if(map[R-1][c]>=1) map[R-1][c]--;
@@ -110,38 +111,38 @@ public class G1온풍기안녕_23289 {
         
     }
 
-    private static void setTemper() {
-        for(int i=0; i<R; i++){
+    private static void setTemper() {   // 온도 체팅
+        for(int i=0; i<R; i++){ // 임시 온도 저장 배열 초기화
             Arrays.fill(tmpMap[i], 0);
         }
-        for (int x = 0; x < R; x++){
+        for (int x = 0; x < R; x++){    // 한 번 체크한 좌표 표시용
             Arrays.fill(isVisited[x], false);
         }
         for(int i=0; i<R; i++){
             for(int j=0; j<C; j++){
-                if(map[i][j]!=0){                 
+                if(map[i][j]>0){        
                     isVisited[i][j] = true;   
                     for(int d=0; d<4; d++){
                         int nr = i+dx[d];
                         int nc = j+dy[d];
-                        if(nr<0||nr>=R||nc<0||nc>=C||isVisited[nr][nc]) continue;
-                        if(d==0){
+                        if(!check(nr, nc)) continue; // 벽 밖이거나 이미 방문해서 처리한 노드면 체크 다음 좌표 탐색  
+                        if(d==0){ // 상
                             if(wallArr[i][j][0]) continue;
-                        } //상
-                        else if(d==1){
+                        } 
+                        else if(d==1){  // 좌
                             if(wallArr[nr][nc][1]) continue;
-                        } // 좌
-                        else if(d==2){
+                        } 
+                        else if(d==2){  // 우
                             if(wallArr[i][j][1]) continue;
-                        } // 우
-                        else{
+                        } 
+                        else{ // 아래
                             if(wallArr[nr][nc][0]) continue;
-                        } // 아래
-                        int tmp = Math.abs(map[nr][nc]-map[i][j])/4;
-                        if(map[nr][nc]>map[i][j]){
+                        }
+                        int tmp = Math.abs((map[nr][nc]-map[i][j])/4);
+                        if(map[nr][nc]>map[i][j]){  // 클 때
                             tmpMap[nr][nc] -= tmp;
                             tmpMap[i][j] += tmp;
-                        }else if(map[nr][nc]<map[i][j]){
+                        }else if(map[nr][nc]<map[i][j]){    // 작을 때
                             tmpMap[i][j] -= tmp;
                             tmpMap[nr][nc] += tmp;
                         }   
@@ -152,50 +153,43 @@ public class G1온풍기안녕_23289 {
         for(int i=0; i<R; i++){
             for(int j=0; j<C; j++){
                 map[i][j]+=tmpMap[i][j];
-                if(map[i][j]<0) map[i][j] = 0;
             }
-        }
-        for(int i=0; i<R; i++){
-            Arrays.fill(tmpMap[i], 0);
         }
     }
 
     private static void heat() {
-        for (int i = 0; i < heaters.size(); i++) {
+        for (int i = 0; i < heaters.size(); i++) {  // 히터 리스트에서 1개 씩 꺼내서 테스트 한다.
             Heater heat = heaters.get(i);
             for (int x = 0; x < R; x++){
-                Arrays.fill(isVisited[x], false);
+                Arrays.fill(isVisited[x], false);   // 방문 체크 초기화
             }
+            // 히터가 무조건 한 칸 이상 온도를 전파하므로 외각 체크 처음에는 안해도 된다.
             if (heat.dir == 1) {    // 오
-                if(!check(heat.r, heat.c+1)||wallArr[heat.r][heat.c][1]) continue;
                 q.add(new Node(heat.r, heat.c+1));
                 map[heat.r][heat.c+1] +=5;
             } 
             else if (heat.dir == 2) { // 왼
-                if(!check(heat.r, heat.c-1)||wallArr[heat.r][heat.c-1][1]) continue;
                 q.add(new Node(heat.r, heat.c-1));
                 map[heat.r][heat.c-1] +=5;
             } 
             else if (heat.dir == 3) { // 위
-                if(!check(heat.r-1, heat.c)||wallArr[heat.r][heat.c][0]) continue;
                 q.add(new Node(heat.r-1, heat.c));
                 map[heat.r-1][heat.c] +=5;
             } 
             else {    // 아래
-                if(!check(heat.r+1, heat.c)||wallArr[heat.r+1][heat.c][0]) continue;
                 q.add(new Node(heat.r+1, heat.c));
                 map[heat.r+1][heat.c] +=5;
             }
             
-            int dir = heat.dir;
-            int level = 4;
+            int dir = heat.dir; // 히터 방향
+            int level = 4;  // level 설정
             while(!q.isEmpty()){
                 if(level==0){
                     q.clear();
                     break;
                 }
                 int size = q.size();
-                for(int x=0; x<size; x++){
+                for(int x=0; x<size; x++){  // size 만큼 돌고 level-- 해준다.
                     Node node = q.poll();    
                     for(int d=0; d<3; d++){
                         if(check(node.r+dirX[dir][d], node.c+dirY[dir][d])){    // 벽 밖으로 안나갈 때
@@ -203,20 +197,19 @@ public class G1온풍기안녕_23289 {
                                 int nr = node.r + dirX[dir][d];
                                 int nc = node.c + dirY[dir][d];
                                 map[nr][nc]+=level;
-                                isVisited[nr][nc] = true;
-                                q.add(new Node(nr,nc));
+                                isVisited[nr][nc] = true;   // 한 번 +하면 더 할 필요 없으므로 방문체크
+                                q.add(new Node(nr,nc)); // que에 추가하기
                             }
                         }
                     }               
                 }
                 --level;
             }
-            // mapprint();
         }
     }
 
 
-    private static boolean wallCheck(int r, int c, int heatDir, int d) {
+    private static boolean wallCheck(int r, int c, int heatDir, int d) {    // 벽으로 막혀서 못 나가는 조건
         if(heatDir==1){ // 오른쪽
             if(d==0){
                 if(wallArr[r][c][0]||wallArr[r-1][c][1]) return false;
@@ -253,8 +246,8 @@ public class G1온풍기안녕_23289 {
         return true;
     }
 
-    private static boolean check(int nr, int nc) {
-        if (nr < 0 || nr >= R || nc < 0 || nc >= C || isVisited[nr][nc]) {
+    private static boolean check(int nr, int nc) {  // 밖이거나 방문한 노드인지 체크
+        if (nr < 0 || nr >= R || nc < 0 || nc >= C || isVisited[nr][nc]) {  // 범위 밖이면 false 리턴
             return false;
         }
         return true;
