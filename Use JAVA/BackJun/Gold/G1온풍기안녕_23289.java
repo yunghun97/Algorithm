@@ -275,3 +275,4 @@ public class G1온풍기안녕_23289 {
         }
     }
 }
+//https://www.acmicpc.net/problem/23289
