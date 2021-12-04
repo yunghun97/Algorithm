@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.*;
 
 // 다익스트라 쓰면 된다.
-public class test3
+public class test4
 {
     static int N;
     static boolean[] isVisited;
