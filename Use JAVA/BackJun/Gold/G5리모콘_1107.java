@@ -27,6 +27,7 @@ public class G5리모콘_1107 {
             if(tmp>0){
                 int result = Math.abs(N-i);
                 answer = Math.min(answer, tmp+result);
+                if(answer==0) break;
             }
         }
         bw.write(""+answer);
@@ -46,8 +47,7 @@ public class G5리모콘_1107 {
                 return 0;
             }
             n /= 10;
-            result += 1;   // 숫자버튼 누르는 횟수 증가
-            if(result>=answer) return result;
+            result += 1;   // 숫자버튼 누르는 횟수 증가            
         }
         return result;
     }    
