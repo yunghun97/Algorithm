@@ -51,7 +51,7 @@ public class G4스타트택시_19238 {
             if(!move(peopleNum)){
                 break;
             }
-            arrivePeople++; // 도착한 사람 수자
+            arrivePeople++; // 도착한 사람 숫자
         }
         if(arrivePeople!=PEOPLE) bw.write(String.valueOf(-1));
         else bw.write(""+OIL);

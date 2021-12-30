@@ -7,6 +7,7 @@ public class G3최소비용구하기2_11779 {
     static ArrayList<Node>[] list;
     static int[] dist;
     static String[] answer;
+    static boolean[] isVisited;
     static int N,M, START,END;
     static PriorityQueue<City> pq;
     public static void main(String[] args) throws IOException{
@@ -19,6 +20,7 @@ public class G3최소비용구하기2_11779 {
         for(int i=0; i<N; i++){
             list[i] = new ArrayList<>();
         }
+        isVisited = new boolean[N];
         dist = new int[N];
         Arrays.fill(dist, Integer.MAX_VALUE);
         pq = new PriorityQueue<>((o1,o2) -> Integer.compare(o1.weight, o2.weight));
@@ -45,7 +47,9 @@ public class G3최소비용구하기2_11779 {
     }
     private static void dijkstra() {    // 다익스트라 실시
         while(!pq.isEmpty()){            
-            City city = pq.poll();            
+            City city = pq.poll();
+            if(isVisited[city.start]) continue;
+            isVisited[city.start]=true;            
             if(city.start==END){    // 시작 도시가 도착 도시인 경우 -> 우선순위 큐 이므로 가장 최소값이 된다.
                 answer = city.order.split(" ");
                 return;     // 목적지 도착
