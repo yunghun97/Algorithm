@@ -139,7 +139,7 @@ public class G1마법사상어와복제_23290 {
                     if (!outLineCheck(sr3, sc3))
                         continue; // 벽 밖이면 false return;
                     int result = removeCheck(d1, d2, d3); // 얼마나 물고기를 먹을 수 있는지 체크
-                    if (result > removeCount) { // result가 같으면 이미 0~3으로 사전순으로 for문 돌렸으므로 더 작을 때만 상어의 방향이 바뀐다.
+                    if (result > removeCount) { // result가 같으면 이미 0~3으로 사전순으로 for문 돌렸으므로 더 먹은 물고기의 개수가 더 클 때만 상어의 방향이 바뀐다.
                         sharkDir.d1 = d1;
                         sharkDir.d2 = d2;
                         sharkDir.d3 = d3;
