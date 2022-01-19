@@ -36,26 +36,28 @@ public class G5AC_5430 {
                 }
             }
             if (!finish) {
-                bw.write("[");
                 if (!left){   // 뒤집힌 상태이므로 거꾸로 출력
-                    int size = dq.size();
+                    bw.write("[");
+                    int size = dq.size();                
                     for (int i = size-1; i>=0; i--) {
                         bw.write(String.valueOf(dq.pollLast()));
                         if (i!=0) {
                             bw.write(",");
                         }
                     }
+                    bw.write("]\n");
                 }
                 else {
-                    int size = dq.size();
-                    for (int i = 0; i < size; i++) {
-                        bw.write(String.valueOf(dq.pollFirst()));
-                        if (i < size-1) {
-                            bw.write(",");
-                        }
-                    }
+                    bw.write(dq.toString().replaceAll(" ", ""));
+                    bw.newLine();
+                    // int size = dq.size();
+                    // for (int i = 0; i < size; i++) {
+                    //     bw.write(String.valueOf(dq.pollFirst()));
+                    //     if (i < size-1) {
+                    //         bw.write(",");
+                    //     }
+                    // }
                 }
-                bw.write("]\n");
             }         
             dq.clear();   
         }   // 테케 끝
