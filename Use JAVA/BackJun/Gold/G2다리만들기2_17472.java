@@ -141,8 +141,7 @@ public class G2다리만들기2_17472 {
             return false;
         }
         else{
-            if(x<y) isConnected[y] = x;
-            else isConnected[x] = y;
+            isConnected[y] = x;            
             return true;
         }
     }
