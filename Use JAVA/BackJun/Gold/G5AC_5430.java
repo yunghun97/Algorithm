@@ -8,13 +8,15 @@ public class G5AC_5430 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int T = Integer.parseInt(br.readLine());
+        StringTokenizer st;
+        Deque<Integer> dq;
         for (int t = 0; t < T; t++) {
             char[] order = br.readLine().toCharArray();
-            int arrLength = Integer.parseInt(br.readLine());                        
-            StringTokenizer st = new StringTokenizer(br.readLine(),"[],");
-            Deque<Integer> dq = new ArrayDeque<>();            
+            int arrLength = Integer.parseInt(br.readLine());
+            st = new StringTokenizer(br.readLine(), "[],");
+            dq = new ArrayDeque<>();
             for (int i = 0; i < arrLength; i++) {
-                dq.add(Integer.parseInt(st.nextToken()));                
+                dq.add(Integer.parseInt(st.nextToken()));
             }
             boolean left = true;
             boolean finish = false;
@@ -36,31 +38,30 @@ public class G5AC_5430 {
                 }
             }
             if (!finish) {
-                if (!left){   // 뒤집힌 상태이므로 거꾸로 출력
-                    bw.write("[");
-                    int size = dq.size();                
-                    for (int i = size-1; i>=0; i--) {
+                bw.write("[");
+                if (!left) { // 뒤집힌 상태이므로 거꾸로 출력
+                    int size = dq.size();
+                    for (int i = size - 1; i >= 0; i--) {
                         bw.write(String.valueOf(dq.pollLast()));
-                        if (i!=0) {
+                        if (i != 0) {
                             bw.write(",");
                         }
                     }
-                    bw.write("]\n");
+                } else {
+                    // bw.write(dq.toString().replaceAll(" ", ""));
+                    // bw.newLine();
+                    int size = dq.size();
+                    for (int i = 0; i < size; i++) {
+                        bw.write(String.valueOf(dq.pollFirst()));
+                        if (i < size - 1) {
+                            bw.write(",");
+                        }
+                    }
                 }
-                else {
-                    bw.write(dq.toString().replaceAll(" ", ""));
-                    bw.newLine();
-                    // int size = dq.size();
-                    // for (int i = 0; i < size; i++) {
-                    //     bw.write(String.valueOf(dq.pollFirst()));
-                    //     if (i < size-1) {
-                    //         bw.write(",");
-                    //     }
-                    // }
-                }
-            }         
-            dq.clear();   
-        }   // 테케 끝
+                bw.write("]\n");
+            }
+            dq.clear();
+        } // 테케 끝
         bw.flush();
     }
 }
