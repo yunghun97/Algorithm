@@ -49,8 +49,6 @@ public class G2색종이붙이기_17136 {
     }
     /**
      * 
-     * @param map 색종이를 붙이는 map
-     * @param arr 사용한 색종이 종류 저장
      * @param r 시작 행
      * @param c 시작 열
      * @param count 사용한 색종이 개수

@@ -6,7 +6,7 @@ public class 오픈채팅방 {
 
     class Solution {
         public String[] solution(String[] record) {
-            HashMap<String, String> map = new HashMap();
+            HashMap<String, String> map = new HashMap<>();
             StringTokenizer st;
             String[][] result = new String[2][record.length];
             int idx = 0;
