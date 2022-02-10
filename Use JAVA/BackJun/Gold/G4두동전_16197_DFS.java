@@ -45,8 +45,6 @@ public class G4두동전_16197_DFS {
             
             CheckCoin(d, tmpCoin1, tmpCoin2);
             int result = outCheck(tmpCoin1, tmpCoin2);
-            if(tmpCoin2.r==5){
-            }
             if(result==1){
                 answer = Math.min(answer, cnt);
                 return;
@@ -56,9 +54,7 @@ public class G4두동전_16197_DFS {
                 tmpMap[coin1.r][coin1.c] = '.';
                 tmpMap[coin2.r][coin2.c] = '.';
                 moveCoin(tmpMap, d, tmpCoin1, tmpCoin2);
-                move(cnt+1, tmpMap, tmpCoin1, tmpCoin2);
-                if(tmpCoin2.r==4){
-                }
+                move(cnt+1, tmpMap, tmpCoin1, tmpCoin2);   
             }
 
         }
