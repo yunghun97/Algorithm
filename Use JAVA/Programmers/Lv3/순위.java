@@ -25,7 +25,7 @@ public class 순위 {
             }
         }
         
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n; i++){ // 해당 점이 매치를 진행 했을 때 마다 +1
             int result=0;
             for(int j=0; j<n; j++){
                 if(game[i][j] || game[j][i]){
