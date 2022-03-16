@@ -67,6 +67,7 @@ public class 파일명정렬 {
         for(int x = start; x<arr.length; x++){
             if(48<=(int) arr[x] && (int) arr[x] <=57){ // 0~9사이일 때        
                 idx++;
+                if(idx==start+5) return idx; // 최대 5자일 때
             }else{ // 문자일 때
                 return idx;
             }
