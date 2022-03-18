@@ -134,38 +134,7 @@ public class 미생물격리_2382 {
             this.size = size;
             this.dir = dir;
             this.dead = dead;
-        }
-        public int getR() {
-            return r;
-        }
-        public void setR(int r) {
-            this.r = r;
-        }
-        public int getC() {
-            return c;
-        }
-        public void setC(int c) {
-            this.c = c;
-        }
-        public int getDir() {
-            return dir;
-        }
-        public void setDir(int dir) {
-            this.dir = dir;
-        }
-        public int getSize() {
-            return size;
-        }
-        public void setSize(int size) {
-            this.size = size;
-        }
-        public boolean isDead() {
-            return dead;
-        }
-        public void setDead(boolean dead) {
-            this.dead = dead;
-        }
-        
+        }        
     }
 }
 // https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV597vbqAH0DFAVl&
