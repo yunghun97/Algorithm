@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 public class ProgrammersLv1PlusMinus {
     public static void mainPlus(String[] args){
         int[] absolutes = {4,7,12};

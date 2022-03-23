@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 import java.util.Scanner;
 public class Lv1ColacheSuppose {
     public static void main(String[] args) {

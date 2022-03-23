@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 import java.util.*;
 public class ProgrammersLv1HateOverlapNumber {
     public static void mainHate(String[] args){

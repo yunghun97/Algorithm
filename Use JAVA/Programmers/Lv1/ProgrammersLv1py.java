@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 public class ProgrammersLv1py {
     public static void main(String[] args) {
         String s = "P";

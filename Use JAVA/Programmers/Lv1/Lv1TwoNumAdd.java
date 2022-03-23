@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 import java.util.Arrays;
 public class Lv1TwoNumAdd {
     public static void main(String[] args) {

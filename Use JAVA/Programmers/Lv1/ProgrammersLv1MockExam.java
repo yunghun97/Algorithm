@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 import java.util.*;
 public class ProgrammersLv1MockExam{
     public static void main_b(String [] args){

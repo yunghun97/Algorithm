@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 public class ProgrammersLv1DotProduct {
     public static void main_Dot(String[] args){
             Solution4 soul4 = new Solution4();

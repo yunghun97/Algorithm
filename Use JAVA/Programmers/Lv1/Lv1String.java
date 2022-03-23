@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 
 public class Lv1String {
     public static void main(String[] args) {

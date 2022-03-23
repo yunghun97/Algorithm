@@ -1,4 +1,4 @@
-package Basic.ProgrammersLv1;
+package Programmers.Lv1;
 import java.util.Arrays;
 public class PromgrammersLv1Knum {
     public static void main_c(){
