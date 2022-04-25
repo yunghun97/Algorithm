@@ -104,7 +104,7 @@ public class G4마법사상어와파이어스톰_20058 {
 				
                 for(int i =0; i<size; i++){
                     for(int j=0; j<size; j++){
-                        newMap[c+i][r+j] = defaultMap[c+size-1-j][r+i];
+                        newMap[r+i][c+j] = defaultMap[r+size-1-j][c+i];
                     }
                 }
 			}
