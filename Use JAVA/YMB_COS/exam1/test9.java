@@ -1,5 +1,5 @@
 package YMB_COS.exam1;
-
+/*
 // 다음과 같이 import를 사용할 수 있습니다.
 import java.util.*;
 
@@ -38,4 +38,5 @@ class Main {
 
     }
 }
+*/
 // https://edu.goorm.io/learn/lecture/17301/cos-pro-1%EA%B8%89-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-java/lesson/839403/1%EC%B0%A8-%EB%AC%B8%EC%A0%9C9-%EA%B3%84%EB%8B%A8-%EA%B2%8C%EC%9E%84-java

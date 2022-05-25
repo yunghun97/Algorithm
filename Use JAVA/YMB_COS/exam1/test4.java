@@ -1,5 +1,5 @@
 package YMB_COS.exam1;
-
+/*
 // 다음과 같이 import를 사용할 수 있습니다.
 import java.util.*;
 
@@ -29,4 +29,5 @@ class Main {
         System.out.println("solution 메소드의 반환 값은 " + ret + " 입니다.");
     }
 }
+*/
 // https://edu.goorm.io/learn/lecture/17301/cos-pro-1%EA%B8%89-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-java/lesson/839398/1%EC%B0%A8-%EB%AC%B8%EC%A0%9C4-%ED%83%80%EC%9E%84%EB%A8%B8%EC%8B%A0-java

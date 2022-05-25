@@ -1,5 +1,5 @@
 package YMB_COS.exam2;
-
+/*
 class Main {
     interface Book {
         public int getRentalPrice(int day);
@@ -51,4 +51,5 @@ class Main {
         System.out.println("solution 메소드의 반환 값은 " + ret + " 입니다.");
     }
 }
+*/
 // https://edu.goorm.io/learn/lecture/17301/cos-pro-1%EA%B8%89-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-java/lesson/839405/2%EC%B0%A8-%EB%AC%B8%EC%A0%9C1-%EB%8F%84%EC%84%9C-%EB%8C%80%EC%97%AC%EC%A0%90-%EC%9A%B4%EC%98%81-java

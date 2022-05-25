@@ -1,5 +1,5 @@
 package YMB_COS.exam1;
-
+/*
 import java.util.*;
 class Main {
     public int[] solution(int N, int[] votes) {
@@ -46,4 +46,5 @@ class Main {
         System.out.println("solution 메소드의 반환 값은 " + Arrays.toString(ret2) + " 입니다.");
     }
 }
+*/
 // https://edu.goorm.io/learn/lecture/17301/cos-pro-1%EA%B8%89-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-java/lesson/839402/1%EC%B0%A8-%EB%AC%B8%EC%A0%9C8-%EB%88%84%EA%B0%80-%EB%8B%B9%EC%84%A0-%EB%90%98%EB%82%98%EC%9A%94-java

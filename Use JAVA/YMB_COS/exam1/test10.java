@@ -1,5 +1,5 @@
 package YMB_COS.exam1;
-
+/*
 class Main {
     int solution(int[] prices) {
 
@@ -30,4 +30,5 @@ class Main {
         System.out.println("solution 메소드의 반환 값은 " + ret2 + " 입니다.");
     }
 }
+*/
 // https://edu.goorm.io/learn/lecture/17301/cos-pro-1%EA%B8%89-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-java/lesson/839404/1%EC%B0%A8-%EB%AC%B8%EC%A0%9C10-%EC%A3%BC%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EC%B5%9C%EB%8C%80-%EC%88%98%EC%9D%B5%EC%9D%84-%EB%82%B4%EC%84%B8%EC%9A%94-java

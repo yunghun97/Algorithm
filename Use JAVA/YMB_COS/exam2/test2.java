@@ -1,5 +1,5 @@
 package YMB_COS.exam2;
-
+/*
 class Main {
     public int func_a(String times) {
         int hour = Integer.parseInt(times.substring(0, 2));
@@ -41,4 +41,5 @@ class Main {
         System.out.println("solution 메소드의 반환 값은 " + ret2 + " 입니다.");
     }
 }
+*/
 // https://edu.goorm.io/learn/lecture/17301/cos-pro-1%EA%B8%89-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-java/lesson/839406/2%EC%B0%A8-%EB%AC%B8%EC%A0%9C2-%EC%A7%80%ED%95%98%EC%B2%A0-%EA%B8%B0%EB%8B%A4%EB%A6%AC%EA%B8%B0-java
